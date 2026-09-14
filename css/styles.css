@@ -1,0 +1,17 @@
+/* =========================================
+   Design tokens
+   ========================================= */
+:root {
+  /* Colour — dark theme */
+  --bg: #0D1117;
+  --surface: #151B23;
+  --border: #1B2330;
+  --text-primary: #F5F7FA;
+  --text-secondary: #B8C2CC;
+  --text-muted: #7C8894;
+  --accent: #37CDD1;
+  --accent-contrast: #0D1117;
+  --error: #FF6B6B;
+
+ 
+}
