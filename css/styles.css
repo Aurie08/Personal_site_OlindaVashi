@@ -124,13 +124,12 @@ main ul[aria-label="Social profiles"] {
   gap: var(--space-3);
 }
 
-/* =========================================
-   Layout — footer
-   ========================================= */
-footer {
-  max-width: 1100px;
-  margin: 0 auto;sssss
-  padding: var(--space-5);
-  color: var(--text-muted);
-  font-size: var(--fs-small);
+header a[href$="cv.pdf"],
+main a[href="contact.html"],
+main a[href="projects.html"] {
+  display: inline-block;
+  font-weight: 600;
+  padding: var(--space-3) var(--space-5);
+  border-radius: 6px;
+  border: 1.5px solid transparent;
 }
