@@ -133,3 +133,17 @@ main a[href="projects.html"] {
   border-radius: 6px;
   border: 1.5px solid transparent;
 }
+
+header a[href$="cv.pdf"],
+main a[href="contact.html"] {
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+ 
+/* Outline style — secondary action */
+main a[href="projects.html"] {
+  background: transparent;
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
