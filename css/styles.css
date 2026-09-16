@@ -120,8 +120,9 @@ a:focus-visible {
 
 .hero-actions {
   display: flex;
-  gap: var(--space-3);
+  gap: var(--space-5);
   flex-wrap: wrap;
+  margin-top: var(--space-4);
 }
 
 /* =========================================
@@ -140,7 +141,7 @@ header {
 
 header nav ul {
   display: flex;
-  gap: var(--space-5);
+  gap: var(--space-7);
   font-size: var(--fs-body);
   color: var(--text-secondary);
 }
@@ -178,28 +179,39 @@ main ul[aria-label="Social profiles"] {
    Hero layout
    ========================================= */
 .hero {
-  max-width: 1100px;
+   padding-left:5%;
+  max-width: 1850px;
   margin: 0 auto;
-  padding: var(--space-6) var(--space-5);
+  
 
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-7);
+  gap: 9rem;
   flex-wrap: wrap;
 
-  min-height: 420px;
+ 
+
+  background-image: linear-gradient(
+      transparent 0%, var(--bg) 50%
+    ),
+  url("../assets/hero-bg.jpg");
+  background-size: cover;
+  background-position: contain;
+  background-repeat: no-repeat;
 }
 .hero-content {
   flex: 1;
   min-width: 320px;
-  max-width: 600px;
+  max-width: 800px;
+  
 }
 
 .hero-image {
   width: 380px;
   flex-shrink: 0;
+  
 }
 
 
@@ -208,7 +220,8 @@ main ul[aria-label="Social profiles"] {
   width: 100%;
   height: auto;
   
-   
+    
+
 
 }
  
@@ -274,5 +287,37 @@ main a[href="projects.html"] {
   background: transparent;
   color: var(--accent);
   border-color: var(--accent);
+}
+header nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  
+  
+  padding: 8px 14px;
+  border-radius: 8px;
+
+  transition:
+    color 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Hover effect */
+header nav a:hover,
+header nav a:focus-visible {
+  color: var(--accent-contrast);
+  background-color: var(--accent);
+
+  box-shadow:
+    0 0 10px rgba(55, 205, 209, 0.35);
+}
+
+header nav a[aria-current="page"] {
+  color: var(--accent-contrast);
+  background-color: hsla(182, 86%, 49%, 0.65);;
+
+  box-shadow:
+    0 0 10px rgba(66, 150, 153, 0.35),
+    0 0 50px hsla(182, 37%, 54%, 0.65);
 }
 
