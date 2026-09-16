@@ -3,7 +3,7 @@
    ========================================= */
 :root {
   /* Colour — dark theme */
-  --bg: #0D1117;
+  --bg: #0f141a;
   --surface: #151B23;
   --border: #1B2330;
   --text-primary: #F5F7FA;
@@ -17,13 +17,13 @@
   --font-heading: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
 
-  --fs-display: 2.25rem;   /* 36px */
-  --fs-h2: 1.75rem;        /* 28px */
-  --fs-h3: 1.25rem;        /* 20px */
-  --fs-body-lg: 1rem;      /* 16px */
-  --fs-body: 0.875rem;     /* 14px */
-  --fs-small: 0.75rem;     /* 12px */
-  --fs-eyebrow: 0.6875rem; /* 11px */
+  --fs-display: 3rem;      /* 48px */
+--fs-h2: 2.25rem;        /* 36px */
+--fs-h3: 1.5rem;         /* 24px */
+--fs-body-lg: 1.125rem;  /* 18px */
+--fs-body: 1rem;         /* 16px */
+--fs-small: 0.875rem;    /* 14px */
+--fs-eyebrow: 0.8125rem; /* 13px */
 
   /* Spacing scale */
   --space-1: 0.25rem;
@@ -42,7 +42,9 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
-
+.hero-content > * + * {
+  margin-top: var(--space-4);
+}
 body, h1, h2, h3, p, ul {
   margin: 0;
 }
@@ -80,6 +82,48 @@ a:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
+.eyebrow {
+  color: var(--accent);
+  font-size: var(--fs-eyebrow);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: var(--fs-body-lg);
+  font-weight: 500;
+}
+
+.description {
+  color: var(--text-muted);
+  max-width: 32rem;
+  line-height: 1.7;
+}
+
+.social-links {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1.5px solid var(--accent);
+  border-radius: 50%;
+  color: var(--accent);
+}
+
+.hero-actions {
+  display: flex;
+  gap: var(--space-5);
+  flex-wrap: wrap;
+  margin-top: var(--space-4);
+}
 
 /* =========================================
    Layout — header
@@ -97,32 +141,130 @@ header {
 
 header nav ul {
   display: flex;
-  gap: var(--space-5);
+  gap: var(--space-7);
   font-size: var(--fs-body);
   color: var(--text-secondary);
 }
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: var(--space-2);
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  width: 22px;
+  height: 2px;
+  background: var(--text-primary);
+  display: block;
+}
+
 
 /* =========================================
    Layout — hero
    ========================================= */
-main section {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: var(--space-8) var(--space-5);
-}
 
-main section > * + * {
-  margin-top: var(--space-4);
-}
-
-main h1 {
-  margin-top: var(--space-2);
-}
 
 main ul[aria-label="Social profiles"] {
   display: flex;
   gap: var(--space-3);
 }
+
+
+  /* =========================================
+   Hero layout
+   ========================================= */
+.hero {
+   padding-left:5%;
+  max-width: 1850px;
+  margin: 0 auto;
+  
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 9rem;
+  flex-wrap: wrap;
+
+ 
+
+  background-image: linear-gradient(
+      transparent 0%, var(--bg) 50%
+    ),
+  url("../assets/hero-bg.jpg");
+  background-size: cover;
+  background-position: contain;
+  background-repeat: no-repeat;
+}
+.hero-content {
+  flex: 1;
+  min-width: 320px;
+  max-width: 800px;
+  
+}
+
+.hero-image {
+  width: 380px;
+  flex-shrink: 0;
+  
+}
+
+
+.hero-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  
+    
+
+
+}
+ 
+/* Stack image below text on narrow screens */
+@media (max-width: 700px) {
+  main section {
+    flex-direction: column-reverse;
+  }
+ 
+  .hero-image {
+    width: 300px;
+  }
+
+  header {
+    flex-wrap: wrap;
+  }
+
+  .nav-toggle {
+    display: flex;
+    order: 1;
+  }
+
+  header nav {
+    order: 3;
+    display: none;
+    width: 100%;
+  }
+
+  header nav.open {
+    display: block;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: var(--space-3);
+    padding-top: var(--space-4);
+  }
+
+  header a[href$="cv.pdf"] {
+    order: 2;
+  }
+}
+
 
 header a[href$="cv.pdf"],
 main a[href="contact.html"],
@@ -145,5 +287,37 @@ main a[href="projects.html"] {
   background: transparent;
   color: var(--accent);
   border-color: var(--accent);
+}
+header nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  
+  
+  padding: 8px 14px;
+  border-radius: 8px;
+
+  transition:
+    color 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Hover effect */
+header nav a:hover,
+header nav a:focus-visible {
+  color: var(--accent-contrast);
+  background-color: var(--accent);
+
+  box-shadow:
+    0 0 10px rgba(55, 205, 209, 0.35);
+}
+
+header nav a[aria-current="page"] {
+  color: var(--accent-contrast);
+  background-color: hsla(182, 86%, 49%, 0.65);;
+
+  box-shadow:
+    0 0 10px rgba(66, 150, 153, 0.35),
+    0 0 50px hsla(182, 37%, 54%, 0.65);
 }
 
