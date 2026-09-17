@@ -313,11 +313,8 @@ header nav a:focus-visible {
 }
 
 header nav a[aria-current="page"] {
-  color: var(--accent-contrast);
-  background-color: hsla(182, 86%, 49%, 0.65);;
-
-  box-shadow:
-    0 0 10px rgba(66, 150, 153, 0.35),
-    0 0 50px hsla(182, 37%, 54%, 0.65);
+  color: var(--about-text);
+  background-color: rgba(10, 158, 163, 0.16);
+  box-shadow: none;
 }
 
