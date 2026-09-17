@@ -317,4 +317,371 @@ header nav a[aria-current="page"] {
   background-color: rgba(10, 158, 163, 0.16);
   box-shadow: none;
 }
+/* =========================================
+   About Section
+   ========================================= */
 
+.about-section {
+  --about-bg: #e0e8ed;
+  --about-card: #edf2f5;
+  --about-border: #d6dee3;
+  --about-text: #1f262e;
+  --about-secondary: #4d5763;
+  --about-accent: #0a9ea3;
+
+  width: 100%;
+  margin: var(--space-8) 0 0;
+  padding: var(--space-8) max(var(--space-5), calc((100% - 1100px) / 2)) var(--space-6);
+
+  background: var(--about-bg);
+
+  display: grid;
+  grid-template-columns: 380px minmax(0, 1fr);
+  align-items: center;
+  gap: var(--space-8);
+}
+
+
+/* =========================================
+   About image
+   ========================================= */
+
+.about-photo {
+  width: 418px;
+  height: 418px;
+
+  margin: 0;
+
+  border: 8px solid #9edee0;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.about-photo img {
+  display: block;
+
+  width: 400px;
+  height: 400px;
+
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+/* =========================================
+   About Text
+   ========================================= */
+
+.about-copy {
+  min-width: 0;
+}
+
+.about-eyebrow {
+  margin: 0 0 var(--space-4);
+
+  color: var(--about-accent);
+
+  font-family: var(--font-body);
+  font-size: var(--fs-eyebrow);
+  font-weight: 700;
+  line-height: 1.6;
+
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+
+.about-title {
+  max-width: 760px;
+  margin: 0;
+
+  color: var(--about-text);
+
+  font-family: var(--font-heading);
+  font-size: var(--fs-display);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+
+.about-text {
+  max-width: 760px;
+  margin: var(--space-5) 0 0;
+
+  color: var(--about-secondary);
+
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+
+.about-text + .about-text {
+  margin-top: var(--space-5);
+}
+
+
+/* =========================================
+   Engineering Journey
+   ========================================= */
+.journey {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: var(--space-6) max(var(--space-5), calc((100% - 1100px) / 2)) var(--space-8);
+
+  background: #e0e8ed;
+  color: #1f262e;
+}
+
+.journey-heading {
+  margin: 0 0 var(--space-5);
+
+  color: #1f262e;
+
+  font-family: var(--font-heading);
+  font-size: var(--fs-h2);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+
+
+/* =========================================
+   Engineering Journey Cards
+   ========================================= */
+
+.journey-card {
+  position: relative;
+
+  padding: var(--space-5);
+
+  background: #edf2f5;
+  border: 1px solid #d6dee3;
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+
+/* Accent line */
+
+.journey-card::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 0;
+  height: 3px;
+
+  background: var(--accent);
+
+  transition: width 0.3s ease;
+}
+
+
+/* Hover */
+
+.journey-card:hover {
+  transform: translateY(-8px);
+
+  background: #f5f9fa;
+  border-color: var(--accent);
+
+  box-shadow:
+    0 12px 25px rgba(31, 38, 46, 0.10),
+    0 4px 10px rgba(10, 158, 163, 0.08);
+}
+
+
+.journey-card:hover::before {
+  width: 100%;
+}
+
+
+/* Number */
+
+.journey-number {
+  margin: 0 0 var(--space-4);
+
+  color: var(--accent);
+
+  font-family: var(--font-heading);
+  font-size: var(--fs-small);
+  font-weight: 700;
+  line-height: 1.6;
+
+  transition:
+    transform 0.3s ease,
+    letter-spacing 0.3s ease;
+}
+
+
+.journey-card:hover .journey-number {
+  transform: translateX(4px);
+  letter-spacing: 1px;
+}
+
+
+/* Card title */
+.journey-card h3 {
+  margin: 0 0 var(--space-3);
+
+  color: #1f262e;
+
+  font-family: var(--font-heading);
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.journey-card p:not(.journey-number) {
+  margin: 0;
+
+  color: #4d5763;
+
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+/* =========================================
+   About Section — Tablet
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  .about-section {
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: var(--space-6);
+  }
+
+  .about-title {
+    font-size: 2.5rem;
+  }
+
+  .about-photo {
+    max-width: 280px;
+  }
+
+  .journey-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================
+   About Section — Mobile
+   ========================================= */
+
+@media (max-width: 800px) {
+
+  .about-section {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    gap: var(--space-6);
+
+    padding: var(--space-7) var(--space-5);
+  }
+
+  .about-photo {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .about-copy {
+    width: 100%;
+  }
+
+  .about-title {
+    width: 100%;
+    max-width: 700px;
+    font-size: 2.5rem;
+  }
+
+  .about-text {
+    width: 100%;
+    max-width: 700px;
+  }
+}
+
+
+/* =========================================
+   Small Mobile
+   ========================================= */
+
+@media (max-width: 700px) {
+
+  .about-section {
+    padding: var(--space-7) var(--space-4);
+  }
+
+  .about-photo {
+    max-width: 300px;
+  }
+
+  .about-title {
+    font-size: 2.25rem;
+  }
+
+  .about-text {
+    font-size: var(--fs-body);
+  }
+
+  .journey {
+    padding: var(--space-7) var(--space-4);
+  }
+
+  .journey-heading {
+    font-size: var(--fs-h2);
+  }
+
+  .journey-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}
+
+
+/* =========================================
+   Very Small Phones
+   ========================================= */
+
+@media (max-width: 450px) {
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-photo {
+    max-width: 270px;
+  }
+
+  .journey-heading {
+    font-size: 1.875rem;
+  }
+}
