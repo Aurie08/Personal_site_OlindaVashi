@@ -23,67 +23,111 @@
   </button>
 
     <nav id="primaryNav" aria-label="Primary">
-      <ul>
-        <a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#writing">Writing</a>
-<a href="#contact">Contact</a>
-      </ul>
-    </nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#writing">Writing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-    <a href="assets/cv.pdf" download>Resume</a>
+    <a href="assets/cv.pdf" class="resume-button" download>
+  <span>Resume</span>
+
+  <svg
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+  >
+    <path d="M12 3v12"></path>
+    <path d="m7 10 5 5 5-5"></path>
+    <path d="M5 21h14"></path>
+  </svg>
+</a>
   </header>
 
   <main>
-    <section class="hero" id="home">
+   <section class="hero" id="home" aria-labelledby="hero-title">
 
   <div class="hero-content">
-    <p class="eyebrow">Hi, I'm</p>
-    <h1>Olinda Vashi</h1>
-    <p class="subtitle">Electronics and Computer Engineer</p>
 
-    <p class="description">
-      Final-year engineering student building hands-on hardware and
-      embedded systems from IoT irrigation to medical device prototypes.
+    <p class="eyebrow">HI, I'M</p>
+
+    <h1 id="hero-title">Olinda Vashi</h1>
+
+    <p class="subtitle">
+      Electronics &amp; Computer Engineer
     </p>
 
+    <p class="description">
+      I build practical systems where electronics, embedded technology,
+      software, and real-world problem solving come together.
+    </p>
+
+    <div class="hero-focus" aria-label="Areas of focus">
+      <span>HARDWARE</span>
+      <span>SOFTWARE</span>
+      <span>REAL IMPACT</span>
+    </div>
+
     <ul class="social-links" aria-label="Social profiles">
-    <li>
-      <a href="https://facebook.com/" aria-label="Facebook profile">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-      </a>
-    </li>
-    <li>
-      <a href="https://linkedin.com/" aria-label="LinkedIn profile">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-      </a>
-    </li>
-    <li>
-      <a href="mailto:you@example.com" aria-label="Send me an email">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
-      </a>
-    </li>
-    <li>
-      <a href="https://github.com/" aria-label="GitHub profile">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-      </a>
-    </li>
-  </ul>
+
+      <li>
+        <a href="https://facebook.com/" aria-label="Facebook profile">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+        </a>
+      </li>
+
+      <li>
+        <a href="https://linkedin.com/" aria-label="LinkedIn profile">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect x="2" y="9" width="4" height="12"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+      </li>
+
+      <li>
+        <a href="mailto:you@example.com" aria-label="Send me an email">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="m22 6-10 7L2 6"/>
+          </svg>
+        </a>
+      </li>
+
+      <li>
+        <a href="https://github.com/" aria-label="GitHub profile">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+          </svg>
+        </a>
+      </li>
+
+    </ul>
 
     <div class="hero-actions">
-      <a href="contact.html">Get In Touch</a>
-      <a href="projects.html">View Projects</a>
+      <a href="#contact">Get In Touch</a>
+      <a href="#projects">View Projects</a>
     </div>
+
   </div>
 
-  <div class="hero-image">
-    <img
-      src="assets/profile.png"
-      alt="Portrait of Olinda Vashi"
-    >
-  </div>
+  <div class="hero-visual">
+
+    <div class="hero-orbit" aria-hidden="true"></div>
+
+    <div class="hero-image">
+      <img
+        src="assets/profile.png"
+        alt="Portrait of Olinda Vashi"
+      >
+    </div>
+        </div>
 
 </section>
 <!-- =========================================
@@ -123,8 +167,6 @@
   </div>
 
 </section>
-
-
 <!-- =========================================
      ENGINEERING JOURNEY
      ========================================= -->
