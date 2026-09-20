@@ -1806,3 +1806,328 @@ header nav a:focus-visible {
     gap: var(--space-3);
   }
 }
+
+/* =========================================
+   SKILLS SECTION
+   ========================================= */
+
+.skills-section {
+  padding: 6rem 8%;
+
+  background: var(--bg);
+  color: var(--text-primary);
+}
+
+/* =========================================
+   SKILLS HEADER
+   ========================================= */
+
+.skills-header {
+  max-width: 700px;
+  margin: 0 auto 3.5rem;
+  text-align: left;
+}
+
+.skills-eyebrow {
+  margin: 0 0 0.75rem;
+
+  color: var(--accent);
+  font-family: var(--font-body);
+  font-size: var(--fs-eyebrow);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.skills-title {
+  margin: 0 0 1rem;
+
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.skills-intro {
+  max-width: 600px;
+  margin: 0;
+
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: var(--fs-body-lg);
+  line-height: 1.7;
+}
+
+/* =========================================
+   SKILLS PROGRESS GRID
+   ========================================= */
+
+.skills-progress-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 3rem;
+  row-gap: 2rem;
+
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   INDIVIDUAL SKILL
+   ========================================= */
+
+.skill-progress {
+  min-width: 0;
+}
+
+/* Skill title and percentage */
+
+.skill-progress-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-progress-header h3 {
+  margin: 0;
+
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.skill-progress-header span {
+  flex-shrink: 0;
+
+  color: var(--accent);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* Skill description */
+
+.skill-progress p {
+  margin: 0 0 0.75rem;
+
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* =========================================
+   PROFICIENCY PROGRESS BAR
+   ========================================= */
+
+.progress-track {
+  width: 100%;
+  height: 0.625rem;
+
+  overflow: hidden;
+
+  background: var(--border);
+  border-radius: 999px;
+}
+
+.progress-fill {
+  width: var(--progress);
+  height: 100%;
+
+  background: var(--accent);
+  border-radius: inherit;
+
+  transition: width 0.6s ease;
+}
+
+/* =========================================
+   VIEW ALL SKILLS BUTTON
+   ========================================= */
+
+.skills-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.75rem;
+  margin-top: 3rem;
+  padding: 0.85rem 1.25rem;
+
+  border: 1px solid var(--accent);
+  border-radius: 0.5rem;
+
+  background: transparent;
+  color: var(--accent);
+
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.skills-button span {
+  font-size: 1.1rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.skills-button:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-contrast);
+  transform: translateY(-2px);
+}
+
+.skills-button:hover span {
+  transform: translateX(3px);
+}
+
+.skills-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+/* =========================================
+   LIGHT MODE ADJUSTMENTS
+   ========================================= */
+
+[data-theme="light"] .progress-track {
+  background: #d9e3e6;
+}
+
+[data-theme="light"] .progress-fill {
+  background: var(--accent);
+}
+
+[data-theme="light"] .skills-button:hover {
+  color: var(--accent-contrast);
+}
+
+/* =========================================
+   TABLET RESPONSIVENESS
+   ========================================= */
+
+@media (max-width: 1000px) {
+  .skills-section {
+    padding: 5rem 6%;
+  }
+
+  .skills-progress-grid {
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+   ========================================= */
+
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 4rem 6%;
+  }
+
+  .skills-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .skills-progress-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .skills-title {
+    font-size: 2rem;
+  }
+
+  .skills-intro {
+    font-size: 1rem;
+  }
+
+  .skills-button {
+    margin-top: 2.5rem;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE DEVICES
+   ========================================= */
+
+@media (max-width: 480px) {
+  .skills-section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .skills-title {
+    font-size: 1.75rem;
+  }
+
+  .skills-eyebrow {
+    font-size: 0.75rem;
+  }
+
+  .skills-intro {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+  }
+
+  .skill-progress-header {
+    gap: 0.75rem;
+  }
+
+  .skill-progress-header h3 {
+    font-size: 0.9375rem;
+  }
+
+  .skill-progress-header span {
+    font-size: 0.8125rem;
+  }
+
+  .skill-progress p {
+    font-size: 0.8125rem;
+  }
+
+  .progress-track {
+    height: 0.55rem;
+  }
+
+  .skills-button {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION ACCESSIBILITY
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .progress-fill,
+  .skills-button,
+  .skills-button span {
+    transition: none;
+  }
+
+  .skills-button:hover {
+    transform: none;
+  }
+
+  .skills-button:hover span {
+    transform: none;
+  }
+}
