@@ -35,6 +35,24 @@
   --space-7: 3rem;
   --space-8: 4rem;
 }
+/* =========================================
+   LIGHT MODE COLORS
+   ========================================= */
+
+[data-theme="light"] {
+  --bg: #F7FAFB;
+  --surface: #FFFFFF;
+  --border: #D9E3E6;
+
+  --text-primary: #0F1B22;
+  --text-secondary: #52636D;
+  --text-muted: #6B7A82;
+
+  --accent: #087F83;
+  --accent-contrast: #FFFFFF;
+
+  --error: #C0392B;
+}
 
 /* =========================================
    Reset
@@ -57,6 +75,50 @@ ul {
 a {
   color: inherit;
   text-decoration: none;
+}
+/* =========================================
+   THEME TOGGLE
+   ========================================= */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.5rem;
+  height: 2.5rem;
+
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+
+  background: var(--surface);
+  color: var(--text-primary);
+
+  font-size: 1.1rem;
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--accent);
+  color: var(--accent-contrast);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.theme-icon {
+  line-height: 1;
 }
 
 /* =========================================
@@ -1342,5 +1404,405 @@ header nav a:focus-visible {
   header nav a {
     display: block;
     width: 100%;
+  }
+}
+
+/* =========================================
+   PROJECTS SECTION
+   ========================================= */
+
+.projects-section {
+  --projects-bg: #cdd9e2;
+  --projects-card: #edf2f5;
+  --projects-border: #d6dee3;
+  --projects-text: #1f262e;
+  --projects-secondary: #4d5763;
+  --projects-accent: #0a9ea3;
+
+  width: 100%;
+  padding: var(--space-8)
+    max(var(--space-5), calc((100% - 1100px) / 2));
+
+  background: var(--projects-bg);
+  color: var(--projects-text);
+
+  border-top: 1px solid #cbd8df;
+}
+
+
+/* =========================================
+   PROJECTS HEADER
+   ========================================= */
+
+.projects-header {
+  max-width: 700px;
+  margin-bottom: var(--space-7);
+}
+
+.projects-eyebrow {
+  margin: 0 0 var(--space-3);
+
+  color: var(--projects-accent);
+  font-family: var(--font-body);
+  font-size: var(--fs-eyebrow);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.projects-title {
+  margin: 0;
+
+  color: var(--projects-text);
+  font-family: var(--font-heading);
+  font-size: var(--fs-h2);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.projects-intro {
+  max-width: 650px;
+  margin-top: var(--space-4);
+
+  color: var(--projects-secondary);
+  font-family: var(--font-body);
+  font-size: var(--fs-body-lg);
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   PROJECTS GRID
+   ========================================= */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
+
+/* =========================================
+   PROJECT CARD
+   ========================================= */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  overflow: hidden;
+
+  background: var(--projects-card);
+  border: 1px solid var(--projects-border);
+  border-radius: 16px;
+
+  box-shadow:
+    0 6px 18px rgba(31, 38, 46, 0.04);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+
+  border-color: var(--projects-accent);
+
+  box-shadow:
+    0 12px 28px rgba(31, 38, 46, 0.10);
+}
+
+
+/* =========================================
+   PROJECT IMAGE
+   ========================================= */
+
+.project-visual {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+
+  background: var(--projects-bg);
+  border-bottom: 1px solid var(--projects-border);
+}
+
+.project-visual img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-visual img {
+  transform: scale(1.03);
+}
+
+
+/* Optional Image Position Adjustments */
+
+/* Soil moisture photograph */
+.project-card:nth-child(1) .project-visual img {
+  object-position: center;
+}
+
+/* Syringe pump photograph */
+.project-card:nth-child(2) .project-visual img {
+  object-position: center;
+}
+
+/* Kandodo digital level meter photograph */
+.project-card:nth-child(3) .project-visual img {
+  object-position: center;
+}
+
+
+/* =========================================
+   PROJECT CARD CONTENT
+   ========================================= */
+
+.project-card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  padding: var(--space-5);
+}
+
+
+/* =========================================
+   PROJECT CARD META
+   ========================================= */
+
+.project-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+
+  margin-bottom: var(--space-4);
+}
+
+.project-number {
+  color: var(--projects-accent);
+  font-family: var(--font-heading);
+  font-size: var(--fs-small);
+  font-weight: 700;
+}
+
+.project-category {
+  color: var(--projects-secondary);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  line-height: 1.4;
+  text-align: right;
+}
+
+
+/* =========================================
+   PROJECT TITLE
+   ========================================= */
+
+.project-card h3 {
+  margin: 0;
+
+  color: var(--projects-text);
+  font-family: var(--font-heading);
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+
+/* =========================================
+   PROJECT DESCRIPTION
+   ========================================= */
+
+.project-description {
+  margin-top: var(--space-4);
+
+  color: var(--projects-secondary);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   PROJECT TAGS
+   ========================================= */
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+
+  margin-top: var(--space-5);
+  padding: 0;
+
+  list-style: none;
+}
+
+.project-tags li {
+  padding: 5px 10px;
+
+  color: var(--projects-secondary);
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1.4;
+
+  background: transparent;
+  border: 1px solid var(--projects-border);
+  border-radius: 999px;
+}
+
+
+/* =========================================
+   PROJECT LINK
+   ========================================= */
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+
+  margin-top: auto;
+  padding-top: var(--space-5);
+
+  color: var(--projects-accent);
+  font-family: var(--font-body);
+  font-size: var(--fs-small);
+  font-weight: 700;
+  text-decoration: none;
+
+  border-top: 1px solid var(--projects-border);
+
+  transition:
+    color 0.25s ease,
+    gap 0.25s ease;
+}
+
+.project-link:hover {
+  gap: var(--space-4);
+
+  color: var(--projects-text);
+}
+
+.project-link:focus-visible {
+  outline: 3px solid var(--projects-accent);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE LAYOUT
+   ========================================= */
+
+@media (max-width: 1000px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-card:last-child {
+    grid-column: 1 / -1;
+    max-width: calc(50% - var(--space-3));
+  }
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE LAYOUT
+   ========================================= */
+
+@media (max-width: 700px) {
+  .projects-section {
+    padding: var(--space-7) var(--space-4);
+  }
+
+  .projects-title {
+    font-size: 2.25rem;
+  }
+
+  .projects-intro {
+    font-size: var(--fs-body);
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  .project-card:last-child {
+    grid-column: auto;
+    max-width: none;
+  }
+
+  .project-visual {
+    height: 220px;
+  }
+
+  .project-card-content {
+    padding: var(--space-5);
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE SCREENS
+   ========================================= */
+
+@media (max-width: 420px) {
+  .projects-title {
+    font-size: 1.9rem;
+  }
+
+  .project-visual {
+    height: 200px;
+  }
+
+  .project-card-meta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .project-category {
+    text-align: left;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card,
+  .project-link,
+  .project-visual img {
+    transition: none;
+  }
+
+  .project-card:hover {
+    transform: none;
+  }
+
+  .project-card:hover .project-visual img {
+    transform: none;
+  }
+
+  .project-link:hover {
+    gap: var(--space-3);
   }
 }
