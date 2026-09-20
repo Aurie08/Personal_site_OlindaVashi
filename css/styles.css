@@ -35,6 +35,24 @@
   --space-7: 3rem;
   --space-8: 4rem;
 }
+/* =========================================
+   LIGHT MODE COLORS
+   ========================================= */
+
+[data-theme="light"] {
+  --bg: #F7FAFB;
+  --surface: #FFFFFF;
+  --border: #D9E3E6;
+
+  --text-primary: #0F1B22;
+  --text-secondary: #52636D;
+  --text-muted: #6B7A82;
+
+  --accent: #087F83;
+  --accent-contrast: #FFFFFF;
+
+  --error: #C0392B;
+}
 
 /* =========================================
    Reset
@@ -57,6 +75,50 @@ ul {
 a {
   color: inherit;
   text-decoration: none;
+}
+/* =========================================
+   THEME TOGGLE
+   ========================================= */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.5rem;
+  height: 2.5rem;
+
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+
+  background: var(--surface);
+  color: var(--text-primary);
+
+  font-size: 1.1rem;
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--accent);
+  color: var(--accent-contrast);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.theme-icon {
+  line-height: 1;
 }
 
 /* =========================================
