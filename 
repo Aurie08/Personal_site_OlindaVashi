@@ -1,0 +1,14 @@
+iizz
+git :wq
+
+#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch is up to date with 'origin/main'.
+#
+# Changes to be committed:
+#	new file:   Documentation and testing/AI Tool Note
+#	new file:   Documentation and testing/README
+#	new file:   Documentation and testing/decision log
+#	new file:   Documentation and testing/design notes
+#
