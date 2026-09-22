@@ -3,33 +3,33 @@
    ========================================= */
 :root {
   /* Colour — dark theme */
-  --bg: #F7FAFB;
-  --surface: #FFFFFF;
-  --border: #D9E3E6;
-  --text-primary: #0F1B22;
-  --text-secondary: #52636D;
-  --text-muted: #6B7A82;
-  --accent: #087F83;
-  --accent-contrast: #FFFFFF;
-  --error: #C0392B;
+  --bg: #f7fafb;
+  --surface: #ffffff;
+  --border: #d9e3e6;
+  --text-primary: #0f1b22;
+  --text-secondary: #52636d;
+  --text-muted: #6b7a82;
+  --accent: #087f83;
+  --accent-contrast: #ffffff;
+  --error: #c0392b;
   --accent-soft: rgba(8, 127, 131, 0.08);
   --accent-medium: rgba(8, 127, 131, 0.16);
-  --hero-start: #EEF5F6;
-  --hero-end: #F7FAFB;
+  --hero-start: #eef5f6;
+  --hero-end: #f7fafb;
   --hero-overlay: rgba(255, 255, 255, 0.82);
   --shadow-color: rgba(15, 27, 34, 0.08);
 
   /* Type */
-  --font-heading: 'Space Grotesk', sans-serif;
-  --font-body: 'Inter', system-ui, sans-serif;
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
 
-  --fs-display: 3rem;      /* 48px */
---fs-h2: 2.25rem;        /* 36px */
---fs-h3: 1.5rem;         /* 24px */
---fs-body-lg: 1.125rem;  /* 18px */
---fs-body: 1rem;         /* 16px */
---fs-small: 0.875rem;    /* 14px */
---fs-eyebrow: 0.8125rem; /* 13px */
+  --fs-display: 3rem; /* 48px */
+  --fs-h2: 2.25rem; /* 36px */
+  --fs-h3: 1.5rem; /* 24px */
+  --fs-body-lg: 1.125rem; /* 18px */
+  --fs-body: 1rem; /* 16px */
+  --fs-small: 0.875rem; /* 14px */
+  --fs-eyebrow: 0.8125rem; /* 13px */
 
   /* Spacing scale */
   --space-1: 0.25rem;
@@ -46,22 +46,22 @@
    ========================================= */
 
 [data-theme="dark"] {
-  --bg: #0F141A;
-  --surface: #151B23;
-  --border: #1B2330;
+  --bg: #0f141a;
+  --surface: #151b23;
+  --border: #1b2330;
 
-  --text-primary: #F5F7FA;
-  --text-secondary: #B8C2CC;
-  --text-muted: #7C8894;
+  --text-primary: #f5f7fa;
+  --text-secondary: #b8c2cc;
+  --text-muted: #7c8894;
 
-  --accent: #37CDD1;
-  --accent-contrast: #0D1117;
+  --accent: #37cdd1;
+  --accent-contrast: #0d1117;
 
-  --error: #FF6B6B;
+  --error: #ff6b6b;
   --accent-soft: rgba(55, 205, 209, 0.08);
   --accent-medium: rgba(55, 205, 209, 0.16);
-  --hero-start: #0B1016;
-  --hero-end: #111B22;
+  --hero-start: #0b1016;
+  --hero-end: #111b22;
   --hero-overlay: rgba(15, 20, 26, 0.82);
   --shadow-color: rgba(0, 0, 0, 0.24);
 }
@@ -69,13 +69,20 @@
 /* =========================================
    Reset
    ========================================= */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 .hero-content > * + * {
   margin-top: var(--space-4);
 }
-body, h1, h2, h3, p, ul {
+body,
+h1,
+h2,
+h3,
+p,
+ul {
   margin: 0;
 }
 
@@ -237,19 +244,16 @@ header nav ul {
   display: block;
 }
 
-
 /* =========================================
    Layout — hero
    ========================================= */
-
 
 main ul[aria-label="Social profiles"] {
   display: flex;
   gap: var(--space-3);
 }
 
-
-  /* =========================================
+/* =========================================
    Hero — Home
    ========================================= */
 
@@ -270,11 +274,7 @@ main ul[aria-label="Social profiles"] {
   overflow: hidden;
 
   background:
-    radial-gradient(
-      circle at 78% 48%,
-      var(--accent-soft),
-      transparent 30%
-    ),
+    radial-gradient(circle at 78% 48%, var(--accent-soft), transparent 30%),
     linear-gradient(
       135deg,
       var(--hero-start) 0%,
@@ -297,11 +297,7 @@ main ul[aria-label="Social profiles"] {
 
   background-size: 48px 48px;
 
-  mask-image: linear-gradient(
-    to right,
-    black,
-    transparent 85%
-  );
+  mask-image: linear-gradient(to right, black, transparent 85%);
 
   pointer-events: none;
 }
@@ -324,7 +320,6 @@ main ul[aria-label="Social profiles"] {
 
   pointer-events: none;
 }
-
 
 /* =========================================
    Hero content
@@ -392,7 +387,6 @@ main ul[aria-label="Social profiles"] {
   line-height: 1.75;
 }
 
-
 /* =========================================
    Hero focus areas
    ========================================= */
@@ -428,7 +422,6 @@ main ul[aria-label="Social profiles"] {
 
   box-shadow: 0 0 10px rgba(55, 205, 209, 0.5);
 }
-
 
 /* =========================================
    Social links
@@ -482,7 +475,6 @@ main ul[aria-label="Social profiles"] {
   transform: translateY(-3px);
 }
 
-
 /* =========================================
    Hero buttons
    ========================================= */
@@ -532,13 +524,12 @@ main ul[aria-label="Social profiles"] {
 }
 
 .hero-actions a:first-child:hover {
-  box-shadow: 0 8px 22px rgba(55, 205, 209, 0.20);
+  box-shadow: 0 8px 22px rgba(55, 205, 209, 0.2);
 }
 
 .hero-actions a:last-child:hover {
   background: rgba(55, 205, 209, 0.08);
 }
-
 
 /* =========================================
    Hero visual
@@ -568,22 +559,7 @@ main ul[aria-label="Social profiles"] {
   justify-content: center;
 }
 
-.hero-image::before {
-  content: "";
 
-  position: absolute;
-  inset: 8%;
-
-  border-radius: 50%;
-
-  background: var(--accent-medium);
-
-  filter: blur(35px);
-
-  transform: scale(0.9);
-
-  animation: heroGlow 5s ease-in-out infinite;
-}
 
 .hero-image img {
   position: relative;
@@ -595,7 +571,7 @@ main ul[aria-label="Social profiles"] {
   height: 100%;
 
   object-fit: contain;
-    object-position: center center;
+  object-position: center center;
 
   border-radius: 50%;
 
@@ -605,7 +581,6 @@ main ul[aria-label="Social profiles"] {
     0 0 0 12px rgba(55, 205, 209, 0.04),
     0 0 50px rgba(55, 205, 209, 0.18);
 }
-
 
 /* =========================================
    Decorative orbit
@@ -649,80 +624,18 @@ main ul[aria-label="Social profiles"] {
 }
 
 
-/* =========================================
-   Hero labels
-   ========================================= */
-
-.hero-label {
-  position: absolute;
-  z-index: 3;
-
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-
-  padding: var(--space-2) var(--space-3);
-
-  color: var(--text-secondary);
-
-  font-family: var(--font-body);
-  font-size: 0.7rem;
-  font-weight: 700;
-
-  letter-spacing: 1.2px;
-
-  background: var(--hero-overlay);
-  border: 1px solid var(--border);
-  border-radius: 5px;
-
-  backdrop-filter: blur(8px);
-}
-
-.hero-label span {
-  color: var(--accent);
-  font-family: var(--font-heading);
-}
-
-.hero-label-hardware {
-  top: 17%;
-  left: 1%;
-}
-
-.hero-label-software {
-  top: 47%;
-  right: -2%;
-}
-
-.hero-label-impact {
-  bottom: 17%;
-  left: 4%;
-}
 
 
-/* =========================================
-   Hero animation
-   ========================================= */
 
 
-@keyframes heroGlow {
-  0%,
-  100% {
-    opacity: 0.65;
-    transform: scale(0.9);
-  }
 
-  50% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
-}
+
 
 /* =========================================
    Hero responsive layout
    ========================================= */
 
 @media (max-width: 1100px) {
-
   .hero {
     grid-template-columns: minmax(0, 1fr) minmax(350px, 430px);
     gap: var(--space-6);
@@ -749,9 +662,7 @@ main ul[aria-label="Social profiles"] {
   }
 }
 
-
 @media (max-width: 850px) {
-
   .hero {
     min-height: auto;
 
@@ -804,14 +715,9 @@ main ul[aria-label="Social profiles"] {
   }
 }
 
-
 @media (max-width: 700px) {
-
   .hero {
-    padding:
-      var(--space-7)
-      var(--space-4)
-      var(--space-8);
+    padding: var(--space-7) var(--space-4) var(--space-8);
   }
 
   .hero h1 {
@@ -860,9 +766,7 @@ main ul[aria-label="Social profiles"] {
   }
 }
 
-
 @media (max-width: 450px) {
-
   .hero {
     padding-top: var(--space-6);
   }
@@ -910,9 +814,7 @@ main ul[aria-label="Social profiles"] {
   }
 }
 
-
 @media (prefers-reduced-motion: reduce) {
-
   .hero-image::before {
     animation: none;
   }
@@ -951,8 +853,7 @@ header nav a:focus-visible {
   color: var(--accent-contrast);
   background-color: var(--accent);
 
-  box-shadow:
-    0 0 10px rgba(55, 205, 209, 0.35);
+  box-shadow: 0 0 10px rgba(55, 205, 209, 0.35);
 }
 /* =========================================
    Resume Button
@@ -1003,8 +904,7 @@ header nav a:focus-visible {
   background: #5de1e4;
   border-color: #5de1e4;
 
-  box-shadow:
-    0 0 16px rgba(55, 205, 209, 0.35);
+  box-shadow: 0 0 16px rgba(55, 205, 209, 0.35);
 
   transform: translateY(-2px);
 }
@@ -1027,7 +927,8 @@ header nav a:focus-visible {
 
   width: 100%;
   margin: var(--space-8) 0 0;
-  padding: var(--space-8) max(var(--space-5), calc((100% - 1100px) / 2)) var(--space-6);
+  padding: var(--space-8) max(var(--space-5), calc((100% - 1100px) / 2))
+    var(--space-6);
 
   background: var(--about-bg);
 
@@ -1036,7 +937,6 @@ header nav a:focus-visible {
   align-items: center;
   gap: var(--space-8);
 }
-
 
 /* =========================================
    About image
@@ -1056,14 +956,11 @@ header nav a:focus-visible {
   height: 100%;
 
   object-fit: cover;
- object-position: center 35%;
+  object-position: center 35%;
 
- border: 8px solid #9edee0;
+  border: 8px solid #9edee0;
   border-radius: 50%;
 }
-
-
-
 
 /* =========================================
    About Text
@@ -1087,7 +984,6 @@ header nav a:focus-visible {
   letter-spacing: 1.5px;
 }
 
-
 .about-title {
   max-width: 760px;
   margin: 0;
@@ -1099,7 +995,6 @@ header nav a:focus-visible {
   font-weight: 800;
   line-height: 1.15;
 }
-
 
 .about-text {
   max-width: 760px;
@@ -1113,11 +1008,9 @@ header nav a:focus-visible {
   line-height: 1.6;
 }
 
-
 .about-text + .about-text {
   margin-top: var(--space-5);
 }
-
 
 /* =========================================
    Engineering Journey
@@ -1126,7 +1019,8 @@ header nav a:focus-visible {
   width: 100%;
   max-width: none;
   margin: 0;
-  padding: var(--space-6) max(var(--space-5), calc((100% - 1100px) / 2)) var(--space-8);
+  padding: var(--space-6) max(var(--space-5), calc((100% - 1100px) / 2))
+    var(--space-8);
 
   background: #e0e8ed;
   color: #1f262e;
@@ -1143,13 +1037,11 @@ header nav a:focus-visible {
   line-height: 1.15;
 }
 
-
 .journey-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-5);
 }
-
 
 /* =========================================
    Engineering Journey Cards
@@ -1173,7 +1065,6 @@ header nav a:focus-visible {
     background-color 0.3s ease;
 }
 
-
 /* Accent line */
 
 .journey-card::before {
@@ -1188,28 +1079,14 @@ header nav a:focus-visible {
 
   background: var(--accent);
 
-  transition: width 0.3s ease;
+  
 }
 
-
-/* Hover */
-
-.journey-card:hover {
-  transform: translateY(-8px);
-
-  background: #f5f9fa;
-  border-color: var(--accent);
-
-  box-shadow:
-    0 12px 25px rgba(31, 38, 46, 0.10),
-    0 4px 10px rgba(10, 158, 163, 0.08);
-}
 
 
 .journey-card:hover::before {
   width: 100%;
 }
-
 
 /* Number */
 
@@ -1223,15 +1100,6 @@ header nav a:focus-visible {
   font-weight: 700;
   line-height: 1.6;
 
-  transition:
-    transform 0.3s ease,
-    letter-spacing 0.3s ease;
-}
-
-
-.journey-card:hover .journey-number {
-  transform: translateX(4px);
-  letter-spacing: 1px;
 }
 
 
@@ -1262,7 +1130,6 @@ header nav a:focus-visible {
    ========================================= */
 
 @media (max-width: 900px) {
-
   .about-section {
     grid-template-columns: 280px minmax(0, 1fr);
     gap: var(--space-6);
@@ -1281,13 +1148,11 @@ header nav a:focus-visible {
   }
 }
 
-
 /* =========================================
    About Section — Mobile
    ========================================= */
 
 @media (max-width: 800px) {
-
   .about-section {
     display: flex;
     flex-direction: column;
@@ -1320,13 +1185,11 @@ header nav a:focus-visible {
   }
 }
 
-
 /* =========================================
    Small Mobile
    ========================================= */
 
 @media (max-width: 700px) {
-
   .about-section {
     padding: var(--space-7) var(--space-4);
   }
@@ -1357,13 +1220,11 @@ header nav a:focus-visible {
   }
 }
 
-
 /* =========================================
    Very Small Phones
    ========================================= */
 
 @media (max-width: 450px) {
-
   .about-title {
     font-size: 2rem;
   }
@@ -1381,7 +1242,6 @@ header nav a:focus-visible {
    ========================================= */
 
 @media (max-width: 700px) {
-
   header {
     flex-wrap: wrap;
   }
@@ -1432,15 +1292,13 @@ header nav a:focus-visible {
   --projects-accent: var(--accent);
 
   width: 100%;
-  padding: var(--space-8)
-    max(var(--space-5), calc((100% - 1100px) / 2));
+  padding: var(--space-8) max(var(--space-5), calc((100% - 1100px) / 2));
 
   background: var(--projects-bg);
   color: var(--projects-text);
 
   border-top: 1px solid #cbd8df;
 }
-
 
 /* =========================================
    PROJECTS HEADER
@@ -1482,7 +1340,6 @@ header nav a:focus-visible {
   line-height: 1.7;
 }
 
-
 /* =========================================
    PROJECTS GRID
    ========================================= */
@@ -1492,7 +1349,6 @@ header nav a:focus-visible {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-5);
 }
-
 
 /* =========================================
    PROJECT CARD
@@ -1509,23 +1365,11 @@ header nav a:focus-visible {
   border: 1px solid var(--projects-border);
   border-radius: 16px;
 
-  box-shadow:
-    0 6px 18px rgba(31, 38, 46, 0.04);
+  box-shadow: 0 6px 18px rgba(31, 38, 46, 0.04);
 
-  transition:
-    transform 0.3s ease,
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
+
 }
 
-.project-card:hover {
-  transform: translateY(-6px);
-
-  border-color: var(--projects-accent);
-
-  box-shadow:
-    0 12px 28px rgba(31, 38, 46, 0.10);
-}
 
 
 /* =========================================
@@ -1550,12 +1394,9 @@ header nav a:focus-visible {
   object-fit: cover;
   object-position: center;
 
-  transition: transform 0.4s ease;
+  
 }
 
-.project-card:hover .project-visual img {
-  transform: scale(1.03);
-}
 
 
 /* Optional Image Position Adjustments */
@@ -1575,7 +1416,6 @@ header nav a:focus-visible {
   object-position: center;
 }
 
-
 /* =========================================
    PROJECT CARD CONTENT
    ========================================= */
@@ -1587,7 +1427,6 @@ header nav a:focus-visible {
 
   padding: var(--space-5);
 }
-
 
 /* =========================================
    PROJECT CARD META
@@ -1618,7 +1457,6 @@ header nav a:focus-visible {
   text-align: right;
 }
 
-
 /* =========================================
    PROJECT TITLE
    ========================================= */
@@ -1633,7 +1471,6 @@ header nav a:focus-visible {
   line-height: 1.3;
 }
 
-
 /* =========================================
    PROJECT DESCRIPTION
    ========================================= */
@@ -1646,7 +1483,6 @@ header nav a:focus-visible {
   font-size: var(--fs-body);
   line-height: 1.7;
 }
-
 
 /* =========================================
    PROJECT TAGS
@@ -1676,7 +1512,6 @@ header nav a:focus-visible {
   border: 1px solid var(--projects-border);
   border-radius: 999px;
 }
-
 
 /* =========================================
    PROJECT LINK
@@ -1716,7 +1551,6 @@ header nav a:focus-visible {
   border-radius: 4px;
 }
 
-
 /* =========================================
    TABLET RESPONSIVE LAYOUT
    ========================================= */
@@ -1731,7 +1565,6 @@ header nav a:focus-visible {
     max-width: calc(50% - var(--space-3));
   }
 }
-
 
 /* =========================================
    MOBILE RESPONSIVE LAYOUT
@@ -1769,7 +1602,6 @@ header nav a:focus-visible {
   }
 }
 
-
 /* =========================================
    SMALL MOBILE SCREENS
    ========================================= */
@@ -1793,7 +1625,6 @@ header nav a:focus-visible {
     text-align: left;
   }
 }
-
 
 /* =========================================
    REDUCED MOTION
@@ -1823,7 +1654,7 @@ header nav a:focus-visible {
    SKILLS SECTION
    ========================================= */
 
-.skills-section {
+ {
   padding: 6rem 8%;
 
   background: var(--bg);
@@ -1849,7 +1680,7 @@ header nav a:focus-visible {
   font-weight: 600;
   letter-spacing: 0.12em;
   line-height: 1.5;
-  text-transform: uppercase;
+ .skills-section text-transform: uppercase;
 }
 
 .skills-title {
@@ -1951,14 +1782,21 @@ header nav a:focus-visible {
   border-radius: 999px;
 }
 
+.progress-track {
+  width: 100%;
+  height: 0.625rem;
+  overflow: hidden;
+
+  background: var(--border);
+  border-radius: 999px;
+}
+
 .progress-fill {
   width: var(--progress);
   height: 100%;
 
   background: var(--accent);
   border-radius: inherit;
-
-  transition: width 0.6s ease;
 }
 
 /* =========================================
@@ -1986,11 +1824,7 @@ header nav a:focus-visible {
   line-height: 1.5;
   text-decoration: none;
 
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease,
-    border-color 0.2s ease,
-    transform 0.2s ease;
+ 
 }
 
 .skills-button span {
@@ -2675,27 +2509,120 @@ header nav a:focus-visible {
   --about-secondary: var(--text-secondary);
   --about-accent: var(--accent);
 }
-.about-photo img { border-color: var(--accent-medium); }
-.journey { background: var(--bg); color: var(--text-primary); }
-.journey-heading, .journey-card h3 { color: var(--text-primary); }
-.journey-card { background: var(--surface); border-color: var(--border); }
-.journey-card:hover { background: var(--surface); box-shadow: 0 12px 25px var(--shadow-color); }
-.journey-card p:not(.journey-number) { color: var(--text-secondary); }
-.projects-section { --projects-bg: var(--bg); --projects-card: var(--surface); --projects-border: var(--border); --projects-text: var(--text-primary); --projects-secondary: var(--text-secondary); --projects-accent: var(--accent); border-top-color: var(--border); }
-.contact-section { background: var(--bg); color: var(--text-primary); }
-.contact-heading .section-eyebrow, .contact-eyebrow, .contact-detail a:hover, .contact-footer-text, .form-status.success { color: var(--accent); }
-.heading-line { background: var(--accent); }
-.contact-heading h2, .contact-information h3, .contact-detail a, .contact-detail p, .contact-form-card > h3, .form-group label { color: var(--text-primary); }
-.contact-heading > p:last-child, .contact-description, .contact-label, .form-introduction, .form-status, .privacy-note { color: var(--text-secondary); }
-.contact-icon { background: var(--accent-soft); color: var(--accent); }
-.contact-divider { background: var(--border); }
-.contact-form-card { border-color: var(--border); background: var(--surface); box-shadow: 0 1.5rem 4rem var(--shadow-color); }
-.form-group label span, .form-error, .form-status.failure { color: var(--error); }
-.form-group input, .form-group select, .form-group textarea { border-color: var(--border); background: var(--surface); color: var(--text-primary); }
-.form-group input::placeholder, .form-group textarea::placeholder { color: var(--text-muted); }
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
-.form-group input:hover, .form-group select:hover, .form-group textarea:hover { border-color: var(--text-muted); }
-.form-group input.invalid, .form-group select.invalid, .form-group textarea.invalid { border-color: var(--error); }
-.contact-submit { border-color: var(--accent); background: var(--accent); color: var(--accent-contrast); }
-.contact-submit:hover { background: var(--accent); box-shadow: 0 0.5rem 1.2rem var(--accent-medium); }
-.contact-submit:focus-visible { outline-color: var(--accent); }
+.about-photo img {
+  border-color: var(--accent-medium);
+}
+.journey {
+  background: var(--bg);
+  color: var(--text-primary);
+}
+.journey-heading,
+.journey-card h3 {
+  color: var(--text-primary);
+}
+.journey-card {
+  background: var(--surface);
+  border-color: var(--border);
+}
+.journey-card:hover {
+  background: var(--surface);
+  box-shadow: 0 12px 25px var(--shadow-color);
+}
+.journey-card p:not(.journey-number) {
+  color: var(--text-secondary);
+}
+.projects-section {
+  --projects-bg: var(--bg);
+  --projects-card: var(--surface);
+  --projects-border: var(--border);
+  --projects-text: var(--text-primary);
+  --projects-secondary: var(--text-secondary);
+  --projects-accent: var(--accent);
+  border-top-color: var(--border);
+}
+.contact-section {
+  background: var(--bg);
+  color: var(--text-primary);
+}
+.contact-heading .section-eyebrow,
+.contact-eyebrow,
+.contact-detail a:hover,
+.contact-footer-text,
+.form-status.success {
+  color: var(--accent);
+}
+.heading-line {
+  background: var(--accent);
+}
+.contact-heading h2,
+.contact-information h3,
+.contact-detail a,
+.contact-detail p,
+.contact-form-card > h3,
+.form-group label {
+  color: var(--text-primary);
+}
+.contact-heading > p:last-child,
+.contact-description,
+.contact-label,
+.form-introduction,
+.form-status,
+.privacy-note {
+  color: var(--text-secondary);
+}
+.contact-icon {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.contact-divider {
+  background: var(--border);
+}
+.contact-form-card {
+  border-color: var(--border);
+  background: var(--surface);
+  box-shadow: 0 1.5rem 4rem var(--shadow-color);
+}
+.form-group label span,
+.form-error,
+.form-status.failure {
+  color: var(--error);
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  border-color: var(--border);
+  background: var(--surface);
+  color: var(--text-primary);
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-muted);
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+  border-color: var(--text-muted);
+}
+.form-group input.invalid,
+.form-group select.invalid,
+.form-group textarea.invalid {
+  border-color: var(--error);
+}
+.contact-submit {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+.contact-submit:hover {
+  background: var(--accent);
+  box-shadow: 0 0.5rem 1.2rem var(--accent-medium);
+}
+.contact-submit:focus-visible {
+  outline-color: var(--accent);
+}

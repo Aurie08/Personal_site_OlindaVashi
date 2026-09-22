@@ -341,7 +341,15 @@
 /* Use the shared theme tokens on the writing page. */
 .writing-page { background: var(--bg); color: var(--text-primary); }
 .back-link, .article-hero .eyebrow, .article-header .eyebrow { color: var(--accent); }
-.article-hero { background-image: linear-gradient(90deg, var(--hero-overlay) 0%, color-mix(in srgb, var(--hero-overlay) 80%, transparent) 48%, transparent 100%), url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfHXW4ZODkjYoeUO3uVGlL1Qb7f4pKaz51uyLbLY1kpA&s=10"); }
+.article-hero {
+  background-image:
+    linear-gradient(
+      90deg,
+      var(--hero-overlay) 0%,
+      transparent 100%
+    ),
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfHXW4ZODkjYoeUO3uVGlL1Qb7f4pKaz51uyLbLY1kpA&s=10");
+}
 .article-hero h1, .article-header h1 { color: var(--text-primary); }
 .article-hero .article-subtitle, .article-subtitle { color: var(--text-secondary); }
 .article-hero .article-details, .article-details, .article-image figcaption, .reading-footer { color: var(--text-muted); }
