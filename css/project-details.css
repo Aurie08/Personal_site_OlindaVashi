@@ -9,16 +9,14 @@
    ========================================= */
 
 :root {
-  --case-bg: #f5f8fa;
-  --case-surface: #edf2f5;
-  --case-border: #d6dee3;
-
-  --case-text: #1f262e;
-  --case-secondary: #4d5763;
-  --case-muted: #6b7782;
-
-  --case-accent: #0a9ea3;
-  --case-accent-dark: #087f83;
+  --case-bg: var(--bg);
+  --case-surface: var(--surface);
+  --case-border: var(--border);
+  --case-text: var(--text-primary);
+  --case-secondary: var(--text-secondary);
+  --case-muted: var(--text-muted);
+  --case-accent: var(--accent);
+  --case-accent-dark: var(--accent);
 
   --case-radius-sm: 8px;
   --case-radius-md: 16px;
@@ -59,6 +57,10 @@ body {
 
   background: var(--case-surface);
   border-bottom: 1px solid var(--case-border);
+}
+
+.project-header .theme-toggle {
+  flex: 0 0 auto;
 }
 
 .project-logo {
@@ -491,7 +493,7 @@ body {
 
   padding: 14px 20px;
 
-  color: #ffffff;
+  color: var(--accent-contrast);
   background: var(--case-accent-dark);
 
   border: 1px solid var(--case-accent-dark);
@@ -507,7 +509,7 @@ body {
 }
 
 .case-study-button:hover {
-  background: #06666a;
+  background: var(--case-accent);
   transform: translateY(-2px);
 }
 

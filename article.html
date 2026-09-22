@@ -12,6 +12,7 @@
 
   <title>Technical Writing | Olinda Vashi</title>
 
+  <script>document.documentElement.dataset.theme = localStorage.getItem('theme') || 'light';</script>
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,9 +54,13 @@
         <a href="index.html#about">About</a>
         <a href="index.html#skills">Skills</a>
         <a href="index.html#projects">Projects</a>
-        <a href="writing.html" aria-current="page">Writing</a>
+        <a href="article.html" aria-current="page">Writing</a>
         <a href="index.html#contact">Contact</a>
       </nav>
+
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="true">
+        <span class="theme-icon" aria-hidden="true">☾</span>
+      </button>
     </div>
   </header>
 
@@ -247,6 +252,6 @@
     </p>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
