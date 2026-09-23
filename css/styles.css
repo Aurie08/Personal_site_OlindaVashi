@@ -3,27 +3,33 @@
    ========================================= */
 :root {
   /* Colour — dark theme */
-  --bg: #0f141a;
-  --surface: #151B23;
-  --border: #1B2330;
-  --text-primary: #F5F7FA;
-  --text-secondary: #B8C2CC;
-  --text-muted: #7C8894;
-  --accent: #37CDD1;
-  --accent-contrast: #0D1117;
-  --error: #FF6B6B;
+  --bg: #f7fafb;
+  --surface: #ffffff;
+  --border: #d9e3e6;
+  --text-primary: #0f1b22;
+  --text-secondary: #52636d;
+  --text-muted: #6b7a82;
+  --accent: #087f83;
+  --accent-contrast: #ffffff;
+  --error: #c0392b;
+  --accent-soft: rgba(8, 127, 131, 0.08);
+  --accent-medium: rgba(8, 127, 131, 0.16);
+  --hero-start: #eef5f6;
+  --hero-end: #f7fafb;
+  --hero-overlay: rgba(255, 255, 255, 0.82);
+  --shadow-color: rgba(15, 27, 34, 0.08);
 
   /* Type */
-  --font-heading: 'Space Grotesk', sans-serif;
-  --font-body: 'Inter', system-ui, sans-serif;
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
 
-  --fs-display: 3rem;      /* 48px */
---fs-h2: 2.25rem;        /* 36px */
---fs-h3: 1.5rem;         /* 24px */
---fs-body-lg: 1.125rem;  /* 18px */
---fs-body: 1rem;         /* 16px */
---fs-small: 0.875rem;    /* 14px */
---fs-eyebrow: 0.8125rem; /* 13px */
+  --fs-display: 3rem; /* 48px */
+  --fs-h2: 2.25rem; /* 36px */
+  --fs-h3: 1.5rem; /* 24px */
+  --fs-body-lg: 1.125rem; /* 18px */
+  --fs-body: 1rem; /* 16px */
+  --fs-small: 0.875rem; /* 14px */
+  --fs-eyebrow: 0.8125rem; /* 13px */
 
   /* Spacing scale */
   --space-1: 0.25rem;
@@ -39,31 +45,44 @@
    LIGHT MODE COLORS
    ========================================= */
 
-[data-theme="light"] {
-  --bg: #F7FAFB;
-  --surface: #FFFFFF;
-  --border: #D9E3E6;
+[data-theme="dark"] {
+  --bg: #0f141a;
+  --surface: #151b23;
+  --border: #1b2330;
 
-  --text-primary: #0F1B22;
-  --text-secondary: #52636D;
-  --text-muted: #6B7A82;
+  --text-primary: #f5f7fa;
+  --text-secondary: #b8c2cc;
+  --text-muted: #7c8894;
 
-  --accent: #087F83;
-  --accent-contrast: #FFFFFF;
+  --accent: #37cdd1;
+  --accent-contrast: #0d1117;
 
-  --error: #C0392B;
+  --error: #ff6b6b;
+  --accent-soft: rgba(55, 205, 209, 0.08);
+  --accent-medium: rgba(55, 205, 209, 0.16);
+  --hero-start: #0b1016;
+  --hero-end: #111b22;
+  --hero-overlay: rgba(15, 20, 26, 0.82);
+  --shadow-color: rgba(0, 0, 0, 0.24);
 }
 
 /* =========================================
    Reset
    ========================================= */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 .hero-content > * + * {
   margin-top: var(--space-4);
 }
-body, h1, h2, h3, p, ul {
+body,
+h1,
+h2,
+h3,
+p,
+ul {
   margin: 0;
 }
 
@@ -225,19 +244,16 @@ header nav ul {
   display: block;
 }
 
-
 /* =========================================
    Layout — hero
    ========================================= */
-
 
 main ul[aria-label="Social profiles"] {
   display: flex;
   gap: var(--space-3);
 }
 
-
-  /* =========================================
+/* =========================================
    Hero — Home
    ========================================= */
 
@@ -258,16 +274,12 @@ main ul[aria-label="Social profiles"] {
   overflow: hidden;
 
   background:
-    radial-gradient(
-      circle at 78% 48%,
-      rgba(55, 205, 209, 0.10),
-      transparent 30%
-    ),
+    radial-gradient(circle at 78% 48%, var(--accent-soft), transparent 30%),
     linear-gradient(
       135deg,
-      #0b1016 0%,
+      var(--hero-start) 0%,
       var(--bg) 55%,
-      #111b22 100%
+      var(--hero-end) 100%
     );
 }
 
@@ -280,16 +292,12 @@ main ul[aria-label="Social profiles"] {
   z-index: -1;
 
   background-image:
-    linear-gradient(rgba(55, 205, 209, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(55, 205, 209, 0.035) 1px, transparent 1px);
+    linear-gradient(var(--accent-soft) 1px, transparent 1px),
+    linear-gradient(90deg, var(--accent-soft) 1px, transparent 1px);
 
   background-size: 48px 48px;
 
-  mask-image: linear-gradient(
-    to right,
-    black,
-    transparent 85%
-  );
+  mask-image: linear-gradient(to right, black, transparent 85%);
 
   pointer-events: none;
 }
@@ -303,7 +311,7 @@ main ul[aria-label="Social profiles"] {
   top: 50%;
   transform: translateY(-50%);
 
-  border: 1px solid rgba(55, 205, 209, 0.10);
+  border: 1px solid var(--accent-soft);
   border-radius: 50%;
 
   box-shadow:
@@ -312,7 +320,6 @@ main ul[aria-label="Social profiles"] {
 
   pointer-events: none;
 }
-
 
 /* =========================================
    Hero content
@@ -380,7 +387,6 @@ main ul[aria-label="Social profiles"] {
   line-height: 1.75;
 }
 
-
 /* =========================================
    Hero focus areas
    ========================================= */
@@ -417,7 +423,6 @@ main ul[aria-label="Social profiles"] {
   box-shadow: 0 0 10px rgba(55, 205, 209, 0.5);
 }
 
-
 /* =========================================
    Social links
    ========================================= */
@@ -443,7 +448,7 @@ main ul[aria-label="Social profiles"] {
   border: 1px solid var(--border);
   border-radius: 50%;
 
-  background: rgba(21, 27, 35, 0.65);
+  background: var(--hero-overlay);
 
   transition:
     color 0.25s ease,
@@ -465,11 +470,10 @@ main ul[aria-label="Social profiles"] {
   color: var(--accent);
   border-color: var(--accent);
 
-  background: rgba(55, 205, 209, 0.08);
+  background: var(--accent-soft);
 
   transform: translateY(-3px);
 }
-
 
 /* =========================================
    Hero buttons
@@ -520,13 +524,12 @@ main ul[aria-label="Social profiles"] {
 }
 
 .hero-actions a:first-child:hover {
-  box-shadow: 0 8px 22px rgba(55, 205, 209, 0.20);
+  box-shadow: 0 8px 22px rgba(55, 205, 209, 0.2);
 }
 
 .hero-actions a:last-child:hover {
   background: rgba(55, 205, 209, 0.08);
 }
-
 
 /* =========================================
    Hero visual
@@ -556,22 +559,7 @@ main ul[aria-label="Social profiles"] {
   justify-content: center;
 }
 
-.hero-image::before {
-  content: "";
 
-  position: absolute;
-  inset: 8%;
-
-  border-radius: 50%;
-
-  background: rgba(55, 205, 209, 0.16);
-
-  filter: blur(35px);
-
-  transform: scale(0.9);
-
-  animation: heroGlow 5s ease-in-out infinite;
-}
 
 .hero-image img {
   position: relative;
@@ -583,7 +571,7 @@ main ul[aria-label="Social profiles"] {
   height: 100%;
 
   object-fit: contain;
-    object-position: center center;
+  object-position: center center;
 
   border-radius: 50%;
 
@@ -593,7 +581,6 @@ main ul[aria-label="Social profiles"] {
     0 0 0 12px rgba(55, 205, 209, 0.04),
     0 0 50px rgba(55, 205, 209, 0.18);
 }
-
 
 /* =========================================
    Decorative orbit
@@ -637,80 +624,18 @@ main ul[aria-label="Social profiles"] {
 }
 
 
-/* =========================================
-   Hero labels
-   ========================================= */
-
-.hero-label {
-  position: absolute;
-  z-index: 3;
-
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-
-  padding: var(--space-2) var(--space-3);
-
-  color: var(--text-secondary);
-
-  font-family: var(--font-body);
-  font-size: 0.7rem;
-  font-weight: 700;
-
-  letter-spacing: 1.2px;
-
-  background: rgba(15, 20, 26, 0.82);
-  border: 1px solid var(--border);
-  border-radius: 5px;
-
-  backdrop-filter: blur(8px);
-}
-
-.hero-label span {
-  color: var(--accent);
-  font-family: var(--font-heading);
-}
-
-.hero-label-hardware {
-  top: 17%;
-  left: 1%;
-}
-
-.hero-label-software {
-  top: 47%;
-  right: -2%;
-}
-
-.hero-label-impact {
-  bottom: 17%;
-  left: 4%;
-}
 
 
-/* =========================================
-   Hero animation
-   ========================================= */
 
 
-@keyframes heroGlow {
-  0%,
-  100% {
-    opacity: 0.65;
-    transform: scale(0.9);
-  }
 
-  50% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
-}
+
 
 /* =========================================
    Hero responsive layout
    ========================================= */
 
 @media (max-width: 1100px) {
-
   .hero {
     grid-template-columns: minmax(0, 1fr) minmax(350px, 430px);
     gap: var(--space-6);
@@ -737,9 +662,7 @@ main ul[aria-label="Social profiles"] {
   }
 }
 
-
 @media (max-width: 850px) {
-
   .hero {
     min-height: auto;
 
@@ -792,14 +715,9 @@ main ul[aria-label="Social profiles"] {
   }
 }
 
-
 @media (max-width: 700px) {
-
   .hero {
-    padding:
-      var(--space-7)
-      var(--space-4)
-      var(--space-8);
+    padding: var(--space-7) var(--space-4) var(--space-8);
   }
 
   .hero h1 {
@@ -848,9 +766,7 @@ main ul[aria-label="Social profiles"] {
   }
 }
 
-
 @media (max-width: 450px) {
-
   .hero {
     padding-top: var(--space-6);
   }
@@ -898,9 +814,7 @@ main ul[aria-label="Social profiles"] {
   }
 }
 
-
 @media (prefers-reduced-motion: reduce) {
-
   .hero-image::before {
     animation: none;
   }
@@ -939,8 +853,7 @@ header nav a:focus-visible {
   color: var(--accent-contrast);
   background-color: var(--accent);
 
-  box-shadow:
-    0 0 10px rgba(55, 205, 209, 0.35);
+  box-shadow: 0 0 10px rgba(55, 205, 209, 0.35);
 }
 /* =========================================
    Resume Button
@@ -991,8 +904,7 @@ header nav a:focus-visible {
   background: #5de1e4;
   border-color: #5de1e4;
 
-  box-shadow:
-    0 0 16px rgba(55, 205, 209, 0.35);
+  box-shadow: 0 0 16px rgba(55, 205, 209, 0.35);
 
   transform: translateY(-2px);
 }
@@ -1006,16 +918,17 @@ header nav a:focus-visible {
    ========================================= */
 
 .about-section {
-  --about-bg: #e0e8ed;
-  --about-card: #edf2f5;
-  --about-border: #d6dee3;
-  --about-text: #1f262e;
-  --about-secondary: #4d5763;
-  --about-accent: #0a9ea3;
+  --about-bg: var(--bg);
+  --about-card: var(--surface);
+  --about-border: var(--border);
+  --about-text: var(--text-primary);
+  --about-secondary: var(--text-secondary);
+  --about-accent: var(--accent);
 
   width: 100%;
   margin: var(--space-8) 0 0;
-  padding: var(--space-8) max(var(--space-5), calc((100% - 1100px) / 2)) var(--space-6);
+  padding: var(--space-8) max(var(--space-5), calc((100% - 1100px) / 2))
+    var(--space-6);
 
   background: var(--about-bg);
 
@@ -1024,7 +937,6 @@ header nav a:focus-visible {
   align-items: center;
   gap: var(--space-8);
 }
-
 
 /* =========================================
    About image
@@ -1044,14 +956,11 @@ header nav a:focus-visible {
   height: 100%;
 
   object-fit: cover;
- object-position: center 35%;
+  object-position: center 35%;
 
- border: 8px solid #9edee0;
+  border: 8px solid #9edee0;
   border-radius: 50%;
 }
-
-
-
 
 /* =========================================
    About Text
@@ -1075,7 +984,6 @@ header nav a:focus-visible {
   letter-spacing: 1.5px;
 }
 
-
 .about-title {
   max-width: 760px;
   margin: 0;
@@ -1087,7 +995,6 @@ header nav a:focus-visible {
   font-weight: 800;
   line-height: 1.15;
 }
-
 
 .about-text {
   max-width: 760px;
@@ -1101,11 +1008,9 @@ header nav a:focus-visible {
   line-height: 1.6;
 }
 
-
 .about-text + .about-text {
   margin-top: var(--space-5);
 }
-
 
 /* =========================================
    Engineering Journey
@@ -1114,7 +1019,8 @@ header nav a:focus-visible {
   width: 100%;
   max-width: none;
   margin: 0;
-  padding: var(--space-6) max(var(--space-5), calc((100% - 1100px) / 2)) var(--space-8);
+  padding: var(--space-6) max(var(--space-5), calc((100% - 1100px) / 2))
+    var(--space-8);
 
   background: #e0e8ed;
   color: #1f262e;
@@ -1131,13 +1037,11 @@ header nav a:focus-visible {
   line-height: 1.15;
 }
 
-
 .journey-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-5);
 }
-
 
 /* =========================================
    Engineering Journey Cards
@@ -1161,7 +1065,6 @@ header nav a:focus-visible {
     background-color 0.3s ease;
 }
 
-
 /* Accent line */
 
 .journey-card::before {
@@ -1176,28 +1079,14 @@ header nav a:focus-visible {
 
   background: var(--accent);
 
-  transition: width 0.3s ease;
+  
 }
 
-
-/* Hover */
-
-.journey-card:hover {
-  transform: translateY(-8px);
-
-  background: #f5f9fa;
-  border-color: var(--accent);
-
-  box-shadow:
-    0 12px 25px rgba(31, 38, 46, 0.10),
-    0 4px 10px rgba(10, 158, 163, 0.08);
-}
 
 
 .journey-card:hover::before {
   width: 100%;
 }
-
 
 /* Number */
 
@@ -1211,15 +1100,6 @@ header nav a:focus-visible {
   font-weight: 700;
   line-height: 1.6;
 
-  transition:
-    transform 0.3s ease,
-    letter-spacing 0.3s ease;
-}
-
-
-.journey-card:hover .journey-number {
-  transform: translateX(4px);
-  letter-spacing: 1px;
 }
 
 
@@ -1250,7 +1130,6 @@ header nav a:focus-visible {
    ========================================= */
 
 @media (max-width: 900px) {
-
   .about-section {
     grid-template-columns: 280px minmax(0, 1fr);
     gap: var(--space-6);
@@ -1269,13 +1148,11 @@ header nav a:focus-visible {
   }
 }
 
-
 /* =========================================
    About Section — Mobile
    ========================================= */
 
 @media (max-width: 800px) {
-
   .about-section {
     display: flex;
     flex-direction: column;
@@ -1308,13 +1185,11 @@ header nav a:focus-visible {
   }
 }
 
-
 /* =========================================
    Small Mobile
    ========================================= */
 
 @media (max-width: 700px) {
-
   .about-section {
     padding: var(--space-7) var(--space-4);
   }
@@ -1345,13 +1220,11 @@ header nav a:focus-visible {
   }
 }
 
-
 /* =========================================
    Very Small Phones
    ========================================= */
 
 @media (max-width: 450px) {
-
   .about-title {
     font-size: 2rem;
   }
@@ -1369,7 +1242,6 @@ header nav a:focus-visible {
    ========================================= */
 
 @media (max-width: 700px) {
-
   header {
     flex-wrap: wrap;
   }
@@ -1412,23 +1284,21 @@ header nav a:focus-visible {
    ========================================= */
 
 .projects-section {
-  --projects-bg: #cdd9e2;
-  --projects-card: #edf2f5;
-  --projects-border: #d6dee3;
-  --projects-text: #1f262e;
-  --projects-secondary: #4d5763;
-  --projects-accent: #0a9ea3;
+  --projects-bg: var(--bg);
+  --projects-card: var(--surface);
+  --projects-border: var(--border);
+  --projects-text: var(--text-primary);
+  --projects-secondary: var(--text-secondary);
+  --projects-accent: var(--accent);
 
   width: 100%;
-  padding: var(--space-8)
-    max(var(--space-5), calc((100% - 1100px) / 2));
+  padding: var(--space-8) max(var(--space-5), calc((100% - 1100px) / 2));
 
   background: var(--projects-bg);
   color: var(--projects-text);
 
   border-top: 1px solid #cbd8df;
 }
-
 
 /* =========================================
    PROJECTS HEADER
@@ -1470,7 +1340,6 @@ header nav a:focus-visible {
   line-height: 1.7;
 }
 
-
 /* =========================================
    PROJECTS GRID
    ========================================= */
@@ -1480,7 +1349,6 @@ header nav a:focus-visible {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-5);
 }
-
 
 /* =========================================
    PROJECT CARD
@@ -1497,23 +1365,11 @@ header nav a:focus-visible {
   border: 1px solid var(--projects-border);
   border-radius: 16px;
 
-  box-shadow:
-    0 6px 18px rgba(31, 38, 46, 0.04);
+  box-shadow: 0 6px 18px rgba(31, 38, 46, 0.04);
 
-  transition:
-    transform 0.3s ease,
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
+
 }
 
-.project-card:hover {
-  transform: translateY(-6px);
-
-  border-color: var(--projects-accent);
-
-  box-shadow:
-    0 12px 28px rgba(31, 38, 46, 0.10);
-}
 
 
 /* =========================================
@@ -1538,12 +1394,9 @@ header nav a:focus-visible {
   object-fit: cover;
   object-position: center;
 
-  transition: transform 0.4s ease;
+  
 }
 
-.project-card:hover .project-visual img {
-  transform: scale(1.03);
-}
 
 
 /* Optional Image Position Adjustments */
@@ -1563,7 +1416,6 @@ header nav a:focus-visible {
   object-position: center;
 }
 
-
 /* =========================================
    PROJECT CARD CONTENT
    ========================================= */
@@ -1575,7 +1427,6 @@ header nav a:focus-visible {
 
   padding: var(--space-5);
 }
-
 
 /* =========================================
    PROJECT CARD META
@@ -1606,7 +1457,6 @@ header nav a:focus-visible {
   text-align: right;
 }
 
-
 /* =========================================
    PROJECT TITLE
    ========================================= */
@@ -1621,7 +1471,6 @@ header nav a:focus-visible {
   line-height: 1.3;
 }
 
-
 /* =========================================
    PROJECT DESCRIPTION
    ========================================= */
@@ -1634,7 +1483,6 @@ header nav a:focus-visible {
   font-size: var(--fs-body);
   line-height: 1.7;
 }
-
 
 /* =========================================
    PROJECT TAGS
@@ -1664,7 +1512,6 @@ header nav a:focus-visible {
   border: 1px solid var(--projects-border);
   border-radius: 999px;
 }
-
 
 /* =========================================
    PROJECT LINK
@@ -1704,7 +1551,6 @@ header nav a:focus-visible {
   border-radius: 4px;
 }
 
-
 /* =========================================
    TABLET RESPONSIVE LAYOUT
    ========================================= */
@@ -1719,7 +1565,6 @@ header nav a:focus-visible {
     max-width: calc(50% - var(--space-3));
   }
 }
-
 
 /* =========================================
    MOBILE RESPONSIVE LAYOUT
@@ -1757,7 +1602,6 @@ header nav a:focus-visible {
   }
 }
 
-
 /* =========================================
    SMALL MOBILE SCREENS
    ========================================= */
@@ -1781,7 +1625,6 @@ header nav a:focus-visible {
     text-align: left;
   }
 }
-
 
 /* =========================================
    REDUCED MOTION
@@ -1811,7 +1654,7 @@ header nav a:focus-visible {
    SKILLS SECTION
    ========================================= */
 
-.skills-section {
+ {
   padding: 6rem 8%;
 
   background: var(--bg);
@@ -1837,7 +1680,7 @@ header nav a:focus-visible {
   font-weight: 600;
   letter-spacing: 0.12em;
   line-height: 1.5;
-  text-transform: uppercase;
+ .skills-section text-transform: uppercase;
 }
 
 .skills-title {
@@ -1939,14 +1782,21 @@ header nav a:focus-visible {
   border-radius: 999px;
 }
 
+.progress-track {
+  width: 100%;
+  height: 0.625rem;
+  overflow: hidden;
+
+  background: var(--border);
+  border-radius: 999px;
+}
+
 .progress-fill {
   width: var(--progress);
   height: 100%;
 
   background: var(--accent);
   border-radius: inherit;
-
-  transition: width 0.6s ease;
 }
 
 /* =========================================
@@ -1974,11 +1824,7 @@ header nav a:focus-visible {
   line-height: 1.5;
   text-decoration: none;
 
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease,
-    border-color 0.2s ease,
-    transform 0.2s ease;
+ 
 }
 
 .skills-button span {
@@ -2130,4 +1976,653 @@ header nav a:focus-visible {
   .skills-button:hover span {
     transform: none;
   }
+}
+
+/* =========================================
+    CONTACT SECTION
+========================================= */
+
+.contact-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 7rem 1.5rem 6rem;
+  background: #f7fafb;
+  color: #142945;
+}
+
+/* =========================================
+   DECORATIVE BACKGROUND ELEMENTS
+========================================= */
+
+.contact-decoration {
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.contact-decoration-left {
+  top: 8rem;
+  left: -13rem;
+  width: 30rem;
+  height: 30rem;
+  background: rgba(8, 127, 131, 0.055);
+}
+
+.contact-decoration-right {
+  right: -12rem;
+  bottom: -15rem;
+  width: 32rem;
+  height: 32rem;
+  background: rgba(8, 127, 131, 0.045);
+}
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.contact-heading {
+  max-width: 850px;
+  margin: 0 auto 4.5rem;
+  text-align: center;
+}
+
+.contact-heading .section-eyebrow,
+.contact-eyebrow {
+  margin: 0 0 1rem;
+  color: #087f83;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.heading-line {
+  width: 4.5rem;
+  height: 0.2rem;
+  margin: 0 auto 1.8rem;
+  border-radius: 999px;
+  background: #087f83;
+}
+
+.contact-heading h2 {
+  margin: 0 0 1.2rem;
+  color: #10243d;
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.contact-heading > p:last-child {
+  max-width: 780px;
+  margin: 0 auto;
+  color: #526b87;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* =========================================
+   MAIN CONTACT LAYOUT
+========================================= */
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: start;
+  gap: 5rem;
+  width: min(100%, 1180px);
+  margin: 0 auto;
+}
+
+/* =========================================
+   CONTACT INFORMATION
+========================================= */
+
+.contact-information {
+  padding: 0.5rem 0;
+}
+
+.contact-eyebrow {
+  margin-bottom: 1.4rem;
+}
+
+.contact-information h3 {
+  margin: 0 0 1.4rem;
+  color: #10243d;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.25;
+}
+
+.contact-description {
+  max-width: 450px;
+  margin: 0 0 2.8rem;
+  color: #526b87;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+/* =========================================
+   CONTACT DETAILS
+========================================= */
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.6rem;
+}
+
+.contact-icon {
+  display: flex;
+  flex: 0 0 3.5rem;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: #e1f3f4;
+  color: #087f83;
+  font-size: 1.4rem;
+}
+
+.contact-detail > div:last-child {
+  min-width: 0;
+}
+
+.contact-label {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #58708d;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.contact-detail a,
+.contact-detail p {
+  display: block;
+  margin: 0;
+  color: #142945;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.contact-detail a {
+  overflow-wrap: anywhere;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-detail a:hover {
+  color: #087f83;
+}
+
+.contact-divider {
+  width: 100%;
+  max-width: 480px;
+  height: 1px;
+  margin: 2.8rem 0 1.8rem;
+  background: #d5e3e7;
+}
+
+.contact-footer-text {
+  margin: 0;
+  color: #087f83;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+/* =========================================
+   FORM CARD
+========================================= */
+
+.contact-form-card {
+  padding: 2.8rem;
+  border: 1px solid #dce7eb;
+  border-radius: 1.25rem;
+  background: #ffffff;
+  box-shadow: 0 1.5rem 4rem rgba(23, 54, 75, 0.08);
+}
+
+.contact-form-card > h3 {
+  margin: 0 0 0.5rem;
+  color: #10243d;
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.form-introduction {
+  margin: 0 0 2rem;
+  color: #617791;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* =========================================
+   FORM STRUCTURE
+========================================= */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.form-group label {
+  margin-bottom: 0.55rem;
+  color: #1b304b;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.form-group label span {
+  color: #c0392b;
+}
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d0dfe6;
+  border-radius: 0.65rem;
+  outline: none;
+  background: #ffffff;
+  color: #172b3a;
+  font: inherit;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.form-group input,
+.form-group select {
+  min-height: 3.5rem;
+  padding: 0.85rem 1rem;
+}
+
+.form-group textarea {
+  min-height: 9rem;
+  padding: 1rem;
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #8a9caf;
+}
+
+.form-group select {
+  cursor: pointer;
+  appearance: auto;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #087f83;
+  box-shadow: 0 0 0 3px rgba(8, 127, 131, 0.12);
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+  border-color: #a9c5ce;
+}
+
+/* =========================================
+   VALIDATION MESSAGES
+========================================= */
+
+.form-error {
+  min-height: 1.2rem;
+  margin-top: 0.4rem;
+  color: #c0392b;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.form-group input.invalid,
+.form-group select.invalid,
+.form-group textarea.invalid {
+  border-color: #c0392b;
+}
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.contact-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  width: 100%;
+  min-height: 3.6rem;
+  margin-top: 0.4rem;
+  padding: 0.9rem 1.5rem;
+  border: 1px solid #087f83;
+  border-radius: 0.7rem;
+  background: #159da3;
+  color: #ffffff;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.contact-submit:hover {
+  background: #087f83;
+  box-shadow: 0 0.5rem 1.2rem rgba(8, 127, 131, 0.2);
+  transform: translateY(-2px);
+}
+
+.contact-submit:active {
+  transform: translateY(0);
+}
+
+.contact-submit:focus-visible {
+  outline: 3px solid #087f83;
+  outline-offset: 4px;
+}
+
+/* =========================================
+   FORM STATUS AND PRIVACY NOTE
+========================================= */
+
+.form-status {
+  min-height: 1.4rem;
+  margin: 0;
+  color: #526b87;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.form-status.success {
+  color: #087f83;
+}
+
+.form-status.failure {
+  color: #c0392b;
+}
+
+.privacy-note {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0.3rem 0 0;
+  color: #7b8da1;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 1050px) {
+  .contact-layout {
+    gap: 3rem;
+  }
+
+  .contact-form-card {
+    padding: 2.2rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .contact-section {
+    padding: 5.5rem 1.25rem;
+  }
+
+  .contact-heading {
+    margin-bottom: 3.5rem;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    max-width: 650px;
+  }
+
+  .contact-description {
+    max-width: 100%;
+  }
+
+  .contact-divider {
+    max-width: 100%;
+  }
+
+  .contact-information {
+    padding: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 4.5rem 1rem;
+  }
+
+  .contact-heading {
+    margin-bottom: 3rem;
+    text-align: left;
+  }
+
+  .heading-line {
+    margin-left: 0;
+  }
+
+  .contact-heading h2 {
+    font-size: 2.5rem;
+  }
+
+  .contact-heading > p:last-child {
+    font-size: 1rem;
+  }
+
+  .contact-information h3 {
+    font-size: 2rem;
+  }
+
+  .contact-form-card {
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .contact-form-card > h3 {
+    font-size: 1.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1.35rem;
+  }
+
+  .contact-detail {
+    align-items: flex-start;
+  }
+
+  .contact-icon {
+    flex-basis: 3rem;
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-section *,
+  .contact-section *::before,
+  .contact-section *::after {
+    scroll-behavior: auto;
+    transition: none;
+    animation: none;
+  }
+}
+
+/* Shared theme-aware overrides for homepage sections. */
+.about-section {
+  --about-bg: var(--bg);
+  --about-card: var(--surface);
+  --about-border: var(--border);
+  --about-text: var(--text-primary);
+  --about-secondary: var(--text-secondary);
+  --about-accent: var(--accent);
+}
+.about-photo img {
+  border-color: var(--accent-medium);
+}
+.journey {
+  background: var(--bg);
+  color: var(--text-primary);
+}
+.journey-heading,
+.journey-card h3 {
+  color: var(--text-primary);
+}
+.journey-card {
+  background: var(--surface);
+  border-color: var(--border);
+}
+.journey-card:hover {
+  background: var(--surface);
+  box-shadow: 0 12px 25px var(--shadow-color);
+}
+.journey-card p:not(.journey-number) {
+  color: var(--text-secondary);
+}
+.projects-section {
+  --projects-bg: var(--bg);
+  --projects-card: var(--surface);
+  --projects-border: var(--border);
+  --projects-text: var(--text-primary);
+  --projects-secondary: var(--text-secondary);
+  --projects-accent: var(--accent);
+  border-top-color: var(--border);
+}
+.contact-section {
+  background: var(--bg);
+  color: var(--text-primary);
+}
+.contact-heading .section-eyebrow,
+.contact-eyebrow,
+.contact-detail a:hover,
+.contact-footer-text,
+.form-status.success {
+  color: var(--accent);
+}
+.heading-line {
+  background: var(--accent);
+}
+.contact-heading h2,
+.contact-information h3,
+.contact-detail a,
+.contact-detail p,
+.contact-form-card > h3,
+.form-group label {
+  color: var(--text-primary);
+}
+.contact-heading > p:last-child,
+.contact-description,
+.contact-label,
+.form-introduction,
+.form-status,
+.privacy-note {
+  color: var(--text-secondary);
+}
+.contact-icon {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.contact-divider {
+  background: var(--border);
+}
+.contact-form-card {
+  border-color: var(--border);
+  background: var(--surface);
+  box-shadow: 0 1.5rem 4rem var(--shadow-color);
+}
+.form-group label span,
+.form-error,
+.form-status.failure {
+  color: var(--error);
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  border-color: var(--border);
+  background: var(--surface);
+  color: var(--text-primary);
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-muted);
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+  border-color: var(--text-muted);
+}
+.form-group input.invalid,
+.form-group select.invalid,
+.form-group textarea.invalid {
+  border-color: var(--error);
+}
+.contact-submit {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+.contact-submit:hover {
+  background: var(--accent);
+  box-shadow: 0 0.5rem 1.2rem var(--accent-medium);
+}
+.contact-submit:focus-visible {
+  outline-color: var(--accent);
 }

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Olinda Vashi — Electronics &amp; Computer Engineer</title>
 
+  <script>document.documentElement.dataset.theme = localStorage.getItem('theme') || 'light';</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -28,7 +29,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="#writing">Writing</a></li>
+    <li><a href="article.html">Article</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -78,7 +79,7 @@
       software, and real-world problem solving come together.
     </p>
 
-    <div class="hero-focus" aria-label="Areas of focus">
+    <div class="hero-focus" role="group" aria-label="Areas of focus">
       <span>HARDWARE</span>
       <span>SOFTWARE</span>
       <span>REAL IMPACT</span>
@@ -135,10 +136,13 @@
     <div class="hero-orbit" aria-hidden="true"></div>
 
     <div class="hero-image">
-      <img
-        src="assets/profile.png"
-        alt="Portrait of Olinda Vashi"
-      >
+     <img
+  src="assets/profile.webp"
+  alt="Portrait of Olinda Vashi"
+  width="203"
+  height="286"
+  fetchpriority="high"
+>
     </div>
         </div>
 
@@ -151,7 +155,7 @@
 
   <div class="about-photo">
     <img
-      src="assets/Profilee.png"
+      src="assets/Profilee.webp"
       alt="Portrait of Olinda Vashi"
     >
   </div>
@@ -282,7 +286,7 @@
       <div class="project-visual">
 
         <img
-          src="assets/soil-moisture.jpg"
+          src="assets/soil-moisture.webp"
           alt="Soil moisture monitoring prototype displaying a moisture reading on an LCD"
           loading="lazy"
         >
@@ -371,7 +375,7 @@
       <div class="project-visual">
 
         <img
-          src="assets/syringe-pump.jpg"
+          src="assets/syringe-pump.webp"
           alt="Syringe pump prototype with a syringe, mechanical drive system, tubing, and control enclosure"
           loading="lazy"
         >
@@ -743,6 +747,230 @@
     <span aria-hidden="true">→</span>
   </a>
 </section>
+
+
+<section id="contact" class="contact-section">
+  <!-- Decorative Background Elements -->
+  <div class="contact-decoration contact-decoration-left"></div>
+  <div class="contact-decoration contact-decoration-right"></div>
+
+  <div class="contact-container">
+
+    <!-- Section Heading -->
+    <div class="contact-heading">
+      <p class="section-eyebrow">Get In Touch</p>
+
+      <div class="heading-line"></div>
+
+      <h2>Let’s Connect</h2>
+
+      <p>
+        Are you interested in engineering, innovation, or collaboration?
+        Feel free to reach out. I would be happy to connect.
+      </p>
+    </div>
+
+    <!-- Contact Content -->
+    <div class="contact-layout">
+
+      <!-- Contact Information -->
+      <div class="contact-information">
+
+        <p class="contact-eyebrow">Contact Information</p>
+
+        <h3>
+          Let’s Build<br >
+          What’s Next
+        </h3>
+
+        <p class="contact-description">
+          I am open to opportunities involving electronics, embedded systems,
+          research, and development. Whether you have a question, opportunity,
+          or idea, I would love to hear from you.
+        </p>
+
+        <!-- Email -->
+        <div class="contact-detail">
+          <div class="contact-icon" aria-hidden="true">
+            <span>✉</span>
+          </div>
+
+          <div>
+            <span class="contact-label">Email</span>
+            <a href="mailto:vashiolinda@gmail.com">
+              vashiolinda@gmail.com
+            </a>
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div class="contact-detail">
+          <div class="contact-icon" aria-hidden="true">
+            <span>⌖</span>
+          </div>
+
+          <div>
+            <span class="contact-label">Location</span>
+            <p>Malawi</p>
+          </div>
+        </div>
+
+        <!-- Focus -->
+        <div class="contact-detail">
+          <div class="contact-icon" aria-hidden="true">
+            <span>▣</span>
+          </div>
+
+          <div>
+            <span class="contact-label">Focus</span>
+            <p>Electronics, Embedded Systems &amp; R&amp;D</p>
+          </div>
+        </div>
+
+        <div class="contact-divider"></div>
+
+        <p class="contact-footer-text">
+          Let’s innovate together.
+        </p>
+
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-card">
+
+        <h3>Send a Message</h3>
+
+        <p class="form-introduction">
+          Fill in the form below and I’ll get back to you as soon as possible.
+        </p>
+
+        <form id="contactForm" class="contact-form" novalidate>
+
+          <!-- Name and Email -->
+          <div class="form-row">
+
+            <div class="form-group">
+              <label for="fullName">
+                Full Name <span aria-hidden="true">*</span>
+              </label>
+
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                placeholder="Enter your full name"
+                autocomplete="name"
+                required
+              >
+
+              <small
+                class="form-error"
+                id="fullNameError"
+                aria-live="polite"
+              ></small>
+            </div>
+
+            <div class="form-group">
+              <label for="email">
+                Email Address <span aria-hidden="true">*</span>
+              </label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+              >
+
+              <small
+                class="form-error"
+                id="emailError"
+                aria-live="polite"
+              ></small>
+            </div>
+
+          </div>
+
+          <!-- Subject -->
+          <div class="form-group">
+            <label for="subject">
+              Subject <span aria-hidden="true">*</span>
+            </label>
+
+            <select id="subject" name="subject" required>
+              <option value="">Select a subject</option>
+              <option value="Collaboration">Collaboration</option>
+              <option value="Internship Opportunity">
+                Internship Opportunity
+              </option>
+              <option value="Research and Development">
+                Research and Development
+              </option>
+              <option value="Engineering Project">
+                Engineering Project
+              </option>
+              <option value="General Enquiry">
+                General Enquiry
+              </option>
+            </select>
+
+            <small
+              class="form-error"
+              id="subjectError"
+              aria-live="polite"
+            ></small>
+          </div>
+
+          <!-- Message -->
+          <div class="form-group">
+            <label for="message">
+              Message <span aria-hidden="true">*</span>
+            </label>
+
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              maxlength="500"
+              placeholder="Write your message here..."
+              required
+            ></textarea>
+
+            <small
+              class="form-error"
+              id="messageError"
+              aria-live="polite"
+            ></small>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="contact-submit">
+            <span aria-hidden="true">➤</span>
+            Send Message
+          </button>
+
+          <p
+            id="formStatus"
+            class="form-status"
+            role="status"
+            aria-live="polite"
+          ></p>
+
+          <p class="privacy-note">
+            <span aria-hidden="true">▣</span>
+            Your information will only be used to respond to your message.
+          </p>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+ 
 
   </main>
  
