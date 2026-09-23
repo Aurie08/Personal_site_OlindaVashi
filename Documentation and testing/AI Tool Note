@@ -1,0 +1,98 @@
+# AI Assistance and Learning Reflection
+
+## Project: Personal Portfolio Website
+
+**Student:** Olinda Vashi  
+**Module:** ELE-IWS-521 – Internet and Web Services
+
+## 1. Introduction
+
+Artificial intelligence tools were used as a supporting resource during the development of my personal portfolio website. The website was designed and developed based on the assignment requirements, my personal interests, and my engineering background.
+
+I used AI assistance mainly to understand unfamiliar concepts, troubleshoot technical issues, explore possible solutions, and improve parts of my implementation. I remained responsible for making development decisions, editing the code, testing the website, and integrating the features into the project.
+
+## 2. Areas Where AI Assistance Was Used
+
+### 2.1 HTML and Website Structure
+
+AI was used to clarify HTML structure and explain how to organize different sections of the portfolio, including the navigation, About section, Skills section, Projects section, and Contact section.
+
+The HTML structure and content were adapted to suit my portfolio design and the requirements of the assignment.
+
+### 2.2 CSS and Responsive Design
+
+AI assistance was used when working on responsive layouts, CSS spacing, navigation styling, hover effects, transitions, and light and dark themes.
+
+I tested the suggested changes in my project and adjusted the CSS to match the design I wanted to achieve. I also made changes to the appearance, typography, backgrounds, and layout of the website.
+
+### 2.3 JavaScript
+
+AI was used to help me understand and troubleshoot JavaScript features such as:
+
+- Mobile navigation.
+- Light and dark theme switching.
+- Form validation.
+- Using `localStorage` to remember the selected theme.
+- Fetching information from the GitHub API.
+- Filtering and displaying selected repositories.
+
+The JavaScript was reviewed and tested in my project to ensure that the features worked as expected.
+
+### 2.4 Git and GitHub
+
+AI assistance was used to explain Git commands and development workflows, including:
+
+- Creating and switching branches.
+- Committing changes.
+- Pushing changes to GitHub.
+- Creating and merging pull requests.
+- Understanding Git status messages and warnings.
+
+I carried out the Git operations in my own project repository and used the workflow to manage the development of different features.
+
+### 2.5 GitHub API Integration
+
+AI was used to help me understand how to retrieve public repository information from GitHub using an API request.
+
+I implemented an API integration that retrieves my public GitHub repositories and filters the results to display selected projects on my portfolio website. I tested the integration and confirmed that the selected project cards were displayed correctly.
+
+## 3. How AI Suggestions Were Verified
+
+I did not rely on AI suggestions without checking them. I verified the changes by:
+
+- Running the website locally in the browser.
+- Checking whether the navigation and theme toggle worked.
+- Testing the GitHub repository cards.
+- Reviewing the code in Visual Studio Code.
+- Checking the appearance of the website at different screen sizes.
+- Reviewing Git and GitHub results after making commits and merging branches.
+- Making additional changes whenever the result did not match my intended design.
+
+## 4. What I Learned
+
+Using AI as a supporting tool helped me improve my understanding of several development concepts, including:
+
+- Organizing a website using semantic HTML.
+- Creating responsive layouts with CSS.
+- Using JavaScript for interactive website features.
+- Working with APIs and asynchronous JavaScript.
+- Managing a project using Git and GitHub branches.
+- Troubleshooting errors and improving existing code.
+
+I used these explanations to develop my understanding rather than treating AI as a replacement for learning and implementation.
+
+## 5. Limitations of AI Assistance
+
+AI-generated suggestions sometimes required adjustments because they did not always match the existing structure, design, or requirements of my project.
+
+Some suggestions needed to be tested, modified, or rejected before being used. I therefore reviewed the code and made decisions based on how the website was actually working and what I wanted the final portfolio to achieve.
+
+## 6. Reflection
+
+AI assistance was useful during the development of my portfolio, particularly when I encountered technical problems or needed clarification about unfamiliar concepts. However, the project required my own planning, design decisions, implementation, testing, and continuous improvements.
+
+The development process helped me gain practical experience in frontend development, responsive design, JavaScript, API integration, and Git-based project management.
+
+## 7. Declaration
+
+AI tools were used as learning and development support during this project. I remained responsible for the final implementation, testing, modifications, and understanding of the work submitted.
