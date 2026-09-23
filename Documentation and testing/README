@@ -97,7 +97,7 @@ The website was planned and designed using Figma.
 
 ### Figma Design File
 
-[Figma Portfolio Design](PASTE_YOUR_FIGMA_LINK_HERE)
+[Figma Portfolio Design](https://www.figma.com/design/vXIIGQHC0KavwkDA5MNPg5/Olinda-Vashi-Portifolio?node-id=0-1&p=f&t=2WT1KJKRQwLQzqoU-0)
 
 The design process included planning the page structure, developing visual components, and considering desktop and mobile layouts.
 
@@ -107,7 +107,7 @@ The design process included planning the page structure, developing visual compo
 
 Live website:
 
-[View Live Portfolio](PASTE_YOUR_LIVE_WEBSITE_LINK_HERE)
+[View Live Portfolio](https://student-work-classroom-demo-mubas.github.io/Personal_site_OlindaVashi-/)
 
 > Replace the placeholder above with the actual deployed website URL.
 
@@ -128,7 +128,7 @@ You need:
 1. Clone the repository:
 
    ```bash
-   git clone PASTE_YOUR_GITHUB_REPOSITORY_URL_HERE
+   git clone https://github.com/Student-Work-Classroom-Demo-MUBAS/Personal_site_OlindaVashi-
    ```
 
 2. Open the project folder in Visual Studio Code.
