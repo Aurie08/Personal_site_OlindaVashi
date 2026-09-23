@@ -1,0 +1,218 @@
+
+# Decision Log
+
+## Project: Olinda Vashi Portfolio
+
+This document records important design and development decisions made during the creation of the portfolio website.
+
+Each entry describes the decision, alternatives considered, reasoning, and trade-offs.
+
+---
+
+## Decision 1: Use a Scrolling Homepage
+
+### Decision
+
+Use a single scrolling homepage containing the main sections of the portfolio.
+
+### Alternatives Considered
+
+- Create separate HTML pages for Home, About, Skills, Projects, and Contact.
+- Use a single-page layout with anchor navigation.
+
+### Reason for the Decision
+
+A scrolling homepage allows visitors to move through the portfolio using navigation links while keeping the main content in one place. It also provides a continuous presentation of my professional profile and engineering work.
+
+### Trade-off
+
+A single-page website can become long, so clear section headings and navigation are necessary. Separate pages could provide more space for individual sections but would require additional navigation and page management.
+
+---
+
+## Decision 2: Use Semantic HTML
+
+### Decision
+
+Use semantic HTML elements such as sections, headings, navigation, articles, and forms.
+
+### Alternatives Considered
+
+- Build the page mainly with generic div elements.
+- Use semantic HTML elements to communicate the structure of the content.
+
+### Reason for the Decision
+
+Semantic HTML improves document structure, readability, accessibility, and maintainability.
+
+### Trade-off
+
+Semantic structure requires more planning to choose appropriate elements, but it makes the content easier to understand and maintain.
+
+---
+
+## Decision 3: Use CSS Custom Properties
+
+### Decision
+
+Use CSS custom properties for reusable design values such as colours and theme-related styles.
+
+### Alternatives Considered
+
+- Repeat colour values throughout the stylesheet.
+- Define reusable values using CSS variables.
+
+### Reason for the Decision
+
+CSS custom properties make it easier to maintain consistency and support the light and dark themes.
+
+### Trade-off
+
+The stylesheet requires careful variable naming and management. However, updating a shared value becomes easier.
+
+---
+
+## Decision 4: Implement a Light and Dark Theme
+
+### Decision
+
+Provide a theme toggle that allows users to switch between light and dark modes.
+
+### Alternatives Considered
+
+- Use only one fixed colour theme.
+- Use a theme toggle with a saved user preference.
+
+### Reason for the Decision
+
+A theme toggle provides users with a choice of visual presentation. Saving the selected theme using local storage allows the preference to remain after the page is reloaded.
+
+### Trade-off
+
+The project requires additional JavaScript and testing to ensure that text, borders, buttons, and backgrounds remain readable in both themes.
+
+---
+
+## Decision 5: Use Responsive Grid and Flexbox Layouts
+
+### Decision
+
+Use CSS Grid and Flexbox to arrange the website's content and project cards.
+
+### Alternatives Considered
+
+- Use fixed-width layouts.
+- Use CSS Grid and Flexbox with responsive breakpoints.
+
+### Reason for the Decision
+
+Grid and Flexbox provide flexible layout systems that can adapt to different screen sizes and content lengths.
+
+### Trade-off
+
+Responsive layouts require testing at different viewport widths. Some spacing and sizing decisions may need adjustment for mobile screens.
+
+---
+
+## Decision 6: Use Git Feature Branches
+
+### Decision
+
+Use separate feature branches for distinct development tasks and merge completed work through Pull Requests.
+
+### Alternatives Considered
+
+- Make all changes directly on the main branch.
+- Use feature branches for separate tasks.
+
+### Reason for the Decision
+
+Feature branches separate development work from the main version of the project. Pull Requests provide an opportunity to review changes before merging.
+
+### Trade-off
+
+Branch management introduces additional Git commands and requires keeping branches synchronized. It provides better organization and reduces the risk of making unfinished changes directly on main.
+
+---
+
+## Decision 7: Add GitHub API Integration
+
+### Decision
+
+Use the GitHub REST API to retrieve public repositories and display only two selected projects.
+
+### Alternatives Considered
+
+- Manually write all repository information in HTML.
+- Retrieve repositories using the GitHub API and filter the results in JavaScript.
+
+### Reason for the Decision
+
+The API integration demonstrates live data retrieval using fetch, async/await, JSON, and JavaScript DOM manipulation. Filtering allows the portfolio to show the selected Quotation System and Fuel Level Monitoring System repositories.
+
+### Trade-off
+
+The project depends on an external API and network availability. API errors and loading states must be handled. The repository information may also be less detailed than manually written project descriptions.
+
+---
+
+## Decision 8: Use Client-Side Contact Form Validation
+
+### Decision
+
+Add JavaScript validation to check the contact form fields before the form is submitted.
+
+### Alternatives Considered
+
+- Allow empty or incorrectly formatted fields.
+- Validate required fields and email format in the browser.
+
+### Reason for the Decision
+
+Client-side validation provides immediate feedback and helps users correct incomplete or invalid information.
+
+### Trade-off
+
+Client-side validation alone does not provide a complete secure form-processing system. A backend or form service would be required for reliable message delivery and server-side validation.
+
+---
+
+## Decision 9: Use GitHub Repository Links
+
+### Decision
+
+Provide links from the dynamically generated project cards to the corresponding GitHub repositories.
+
+### Alternatives Considered
+
+- Display repository information without an external link.
+- Provide a link that allows visitors to inspect the source repository.
+
+### Reason for the Decision
+
+Repository links allow visitors to explore the project source code and provide evidence of practical development work.
+
+### Trade-off
+
+Visitors leave the portfolio when opening the repository. Opening links in a new tab can help users return to the portfolio.
+
+---
+
+## Decision 10: Use Responsive Mobile Navigation
+
+### Decision
+
+Use a navigation toggle for smaller screen sizes.
+
+### Alternatives Considered
+
+- Keep the full desktop navigation visible on all screen sizes.
+- Use a collapsible mobile navigation menu.
+
+### Reason for the Decision
+
+A collapsible menu reduces clutter and makes navigation easier on smaller screens.
+
+### Trade-off
+
+The mobile menu requires JavaScript, keyboard testing, and accessible labels for the toggle button.

@@ -1,0 +1,232 @@
+
+# Olinda Vashi — Electronics & Computer Engineering Portfolio
+
+## 1. Project Overview
+
+This project is a professional portfolio website developed to showcase my background, engineering skills, projects, technical interests, and professional development as an Electronics and Computer Engineering student.
+
+The portfolio presents my experience in electronics, embedded systems, software development, and engineering innovation. It is designed to provide potential employers, internship providers, collaborators, and other visitors with an overview of my technical abilities and projects.
+
+The website includes:
+
+- A home section introducing my professional profile.
+- An About section describing my engineering journey.
+- A Skills section presenting my technical competencies.
+- A Projects section showcasing selected engineering projects.
+- A GitHub Projects section that retrieves selected repositories using the GitHub API.
+- A technical article section.
+- A Contact section with client-side form validation.
+- Light and dark theme functionality.
+- A downloadable CV.
+
+---
+
+## 2. Project Objectives
+
+The objectives of this portfolio are to:
+
+1. Present my academic and engineering background professionally.
+2. Showcase selected hardware, embedded systems, and software projects.
+3. Demonstrate practical HTML, CSS, and JavaScript skills.
+4. Apply responsive web design principles.
+5. Implement accessibility and usability considerations.
+6. Integrate a live API using JavaScript and async/await.
+7. Practise collaborative development using Git and GitHub.
+8. Provide a platform for future employers and collaborators to contact me.
+
+---
+
+## 3. Technologies Used
+
+| Technology | Purpose |
+|---|---|
+| HTML5 | Semantic website structure |
+| CSS3 | Styling, responsive layouts, and themes |
+| JavaScript | Interactivity, form validation, and API integration |
+| Git | Version control |
+| GitHub | Repository hosting and collaboration |
+| Figma | Wireframes, mockups, and design system |
+| GitHub REST API | Retrieving selected repository information |
+
+---
+
+## 4. Main Features
+
+### Responsive Design
+
+The website is designed to adapt to desktop, tablet, and mobile screen sizes.
+
+### Theme Toggle
+
+Users can switch between light and dark themes. The selected theme is stored in local storage so that the preference can be remembered.
+
+### Mobile Navigation
+
+A navigation toggle allows users to access the website menu on smaller screens.
+
+### Contact Form Validation
+
+The contact form includes client-side validation to check the information entered by the user.
+
+### GitHub API Integration
+
+The website retrieves public repositories from my GitHub account and filters the results to display the following selected projects:
+
+- Quotation System
+- Fuel Level Monitoring System
+
+The API integration includes loading and error states.
+
+---
+
+## 5. Featured Projects
+
+The portfolio presents selected engineering projects, including:
+
+- Soil Moisture Monitoring System
+- Syringe Pump
+- Kandodo Digital Level Meter
+
+Additional repositories are displayed through the GitHub Projects section.
+
+---
+
+## 6. Design
+
+The website was planned and designed using Figma.
+
+### Figma Design File
+
+[Figma Portfolio Design](PASTE_YOUR_FIGMA_LINK_HERE)
+
+The design process included planning the page structure, developing visual components, and considering desktop and mobile layouts.
+
+---
+
+## 7. Live Website
+
+Live website:
+
+[View Live Portfolio](PASTE_YOUR_LIVE_WEBSITE_LINK_HERE)
+
+> Replace the placeholder above with the actual deployed website URL.
+
+---
+
+## 8. Running the Project Locally
+
+### Prerequisites
+
+You need:
+
+- A modern web browser.
+- Visual Studio Code or another code editor.
+- A local development server, such as the Live Server extension.
+
+### Steps
+
+1. Clone the repository:
+
+   ```bash
+   git clone PASTE_YOUR_GITHUB_REPOSITORY_URL_HERE
+   ```
+
+2. Open the project folder in Visual Studio Code.
+
+3. Open `index.html` using Live Server.
+
+4. View the portfolio in your browser.
+
+---
+
+## 9. Project Structure
+
+```text
+Portfolio-Assignment_IWS/
+│
+├── index.html
+├── 404.html
+├── README.md
+├── DESIGN-NOTES.md
+├── DECISION-LOG.md
+├── AI-USAGE-NOTE.md
+│
+├── css/
+│   └── styles.css
+│
+├── js/
+│   └── script.js
+│
+└── assets/
+    └── images and other project assets
+```
+
+> Update this structure so that it matches the actual files and folders in your repository.
+
+---
+
+## 10. Git and GitHub Workflow
+
+The project was developed using Git and GitHub.
+
+The development process included:
+
+- Creating feature branches for separate tasks.
+- Committing changes in small development stages.
+- Pushing branches to GitHub.
+- Creating Pull Requests.
+- Reviewing and merging completed features into the main branch.
+
+Examples of development work included navigation and theme functionality, page improvements, and GitHub API project integration.
+
+---
+
+## 11. Accessibility and Testing
+
+The website was tested for:
+
+- Responsive layouts.
+- Keyboard accessibility.
+- Visible focus states.
+- Form validation.
+- Theme switching.
+- GitHub API loading and failure states.
+- Browser console errors.
+
+Lighthouse results and screenshots will be added after the final testing stage.
+
+---
+
+## 12. Credits
+
+### Fonts
+
+List the fonts used in the project and provide their source links.
+
+Example:
+
+- Google Fonts — [https://fonts.google.com/](https://fonts.google.com/)
+
+### Icons
+
+List any icon libraries used in the project.
+
+### Images
+
+List the source of images that were not created by me.
+
+### AI Assistance
+
+AI tools were used as a learning and development support resource for explanations, debugging, code suggestions, and documentation assistance. Details are provided in `AI-USAGE-NOTE.md`.
+
+---
+
+## 13. Author
+
+**Olinda Vashi**
+
+Electronics and Computer Engineering
+
+Malawi
+
+GitHub: [Aurie08](https://github.com/Aurie08)
