@@ -215,3 +215,108 @@ if (contactForm) {
     });
   });
 }
+
+/* =========================================
+   GITHUB PROJECTS API
+========================================= */
+
+// GitHub API endpoint
+const githubApiUrl =
+  "https://api.github.com/users/Aurie08/repos?sort=updated&per_page=100";
+
+// Repositories we want to display
+const selectedRepositoryNames = [
+  "my-quotation-system",
+  "Fuel-level-monitoring-system"
+];
+
+// HTML elements
+const githubStatus = document.getElementById("github-status");
+const githubProjectGrid = document.getElementById("github-project-grid");
+
+// Fetch and display selected GitHub repositories
+async function loadGitHubProjects() {
+  // Check whether the HTML elements exist
+  if (!githubStatus || !githubProjectGrid) {
+    return;
+  }
+
+  try {
+    // Display loading message
+    githubStatus.textContent = "Loading GitHub projects...";
+
+    // Request repositories from GitHub
+    const response = await fetch(githubApiUrl);
+
+    // Check whether the request was successful
+    if (!response.ok) {
+      throw new Error("Unable to fetch GitHub repositories.");
+    }
+
+    // Convert response to JavaScript data
+    const repositories = await response.json();
+
+    // Keep only the two selected repositories
+    const selectedRepositories = repositories.filter((repository) =>
+      selectedRepositoryNames.includes(repository.name)
+    );
+
+    // Check whether the repositories were found
+    if (selectedRepositories.length === 0) {
+      githubStatus.textContent =
+        "No selected GitHub projects were found.";
+      return;
+    }
+
+    // Clear the loading message
+    githubStatus.textContent = "";
+
+    // Display the project cards
+    githubProjectGrid.innerHTML = selectedRepositories
+      .map((repository) => {
+        const description =
+          repository.description ||
+          "Project description coming soon.";
+
+        const language =
+          repository.language || "Not specified";
+
+        return `
+          <article class="project-card">
+            <div class="project-card-content">
+              <p class="project-category">
+                GitHub Project
+              </p>
+
+              <h3>${repository.name}</h3>
+
+              <p>${description}</p>
+
+              <p class="project-technology">
+                Main language: ${language}
+              </p>
+
+              <a
+                href="${repository.html_url}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link">
+                View Repository
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+        `;
+      })
+      .join("");
+
+  } catch (error) {
+    console.error("GitHub API error:", error);
+
+    githubStatus.textContent =
+      "Unable to load GitHub projects. Please try again later.";
+  }
+}
+
+// Run the function after the page loads
+loadGitHubProjects();
