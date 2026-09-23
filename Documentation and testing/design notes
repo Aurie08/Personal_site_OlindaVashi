@@ -1,0 +1,252 @@
+
+# Design Notes
+
+## 1. Project Name
+
+Olinda Vashi — Electronics & Computer Engineering Portfolio
+
+---
+
+## 2. Target Audience
+
+The portfolio is designed for:
+
+- Potential employers.
+- Internship and graduate programme recruiters.
+- Engineering professionals.
+- Technology collaborators.
+- Academic supervisors.
+- Visitors interested in electronics and computer engineering projects.
+
+The design aims to present technical information clearly while maintaining a professional and approachable appearance.
+
+---
+
+## 3. Design Goals
+
+The main design goals are:
+
+1. Professional presentation.
+2. Clear navigation.
+3. Readable technical content.
+4. Responsive layouts.
+5. Consistent visual identity.
+6. Accessibility and keyboard usability.
+7. Clear presentation of projects and skills.
+8. A balance between engineering professionalism and personal identity.
+
+---
+
+## 4. Sitemap
+
+The portfolio uses a scrolling homepage with navigation links to the main sections.
+
+```text
+Home
+│
+├── About
+│
+├── Skills
+│
+├── Projects
+│   ├── Featured Projects
+│   └── GitHub Projects
+│
+├── Technical Article
+│
+└── Contact
+```
+
+The navigation uses section anchor links to help users move between sections of the homepage.
+
+---
+
+## 5. Page and Section Structure
+
+### Home
+
+Introduces my professional identity and gives visitors an overview of my engineering interests.
+
+### About
+
+Presents my background, engineering journey, and professional interests.
+
+### Skills
+
+Displays technical skills and proficiency information.
+
+### Projects
+
+Presents selected engineering projects and GitHub repository projects.
+
+### Technical Article
+
+Provides a longer technical discussion to demonstrate technical writing and understanding.
+
+### Contact
+
+Provides a way for visitors to enter their contact information and message.
+
+---
+
+## 6. Design System
+
+> The exact values in this section must be checked against the final Figma design and CSS.
+
+### 6.1 Colour Palette
+
+| Element | Colour value | Purpose |
+|---|---|---|
+| Primary background | Confirm from Figma/CSS | Main page background |
+| Secondary background | Confirm from Figma/CSS | Cards and supporting sections |
+| Primary text | Confirm from Figma/CSS | Main readable text |
+| Secondary text | Confirm from Figma/CSS | Supporting information |
+| Accent colour | Confirm from Figma/CSS | Links, buttons, and highlights |
+| Border colour | Confirm from Figma/CSS | Card and input borders |
+
+#### Contrast Ratios
+
+Contrast ratios should be measured using the final colour combinations.
+
+| Combination | Contrast ratio | Status |
+|---|---|---|
+| Body text and main background | To be measured | To be tested |
+| Secondary text and background | To be measured | To be tested |
+| Accent text and background | To be measured | To be tested |
+| Button text and button background | To be measured | To be tested |
+
+The target for normal body text is a minimum contrast ratio of 4.5:1, as specified in the assignment brief.
+
+---
+
+### 6.2 Typography
+
+The project uses the typography defined in the Figma design and CSS.
+
+| Type element | Font | Size | Weight |
+|---|---|---|---|
+| Main heading | Confirm from CSS | Confirm | Confirm |
+| Section heading | Confirm from CSS | Confirm | Confirm |
+| Body text | Confirm from CSS | Confirm | Confirm |
+| Navigation links | Confirm from CSS | Confirm | Confirm |
+| Buttons | Confirm from CSS | Confirm | Confirm |
+
+The final type scale should be consistent across the website and readable on mobile devices.
+
+---
+
+### 6.3 Spacing Scale
+
+The spacing system should be based on the spacing values used in the CSS and Figma design.
+
+| Element | Spacing value |
+|---|---|
+| Section spacing | Confirm from CSS |
+| Card padding | Confirm from CSS |
+| Heading-to-paragraph spacing | Confirm from CSS |
+| Grid gap | Confirm from CSS |
+| Form field spacing | Confirm from CSS |
+
+---
+
+## 7. Layout System
+
+The website uses:
+
+- CSS Grid for project and card layouts where appropriate.
+- Flexbox for navigation and component alignment.
+- Responsive breakpoints for different screen sizes.
+- A mobile-first approach.
+- Consistent section spacing and content alignment.
+
+The final breakpoints should be documented using the actual media queries in the stylesheet.
+
+---
+
+## 8. Component States
+
+### Buttons
+
+The design should account for:
+
+- Default state.
+- Hover state.
+- Focus state.
+- Active state.
+- Disabled state, where applicable.
+
+### Form Fields
+
+The design should account for:
+
+- Default state.
+- Focus state.
+- Valid input state.
+- Invalid input state.
+- Error message state.
+
+### Navigation
+
+The design should account for:
+
+- Desktop navigation.
+- Mobile navigation.
+- Open mobile menu.
+- Closed mobile menu.
+- Keyboard focus state.
+
+### Theme Toggle
+
+The theme toggle provides light and dark modes. The selected theme is stored using local storage.
+
+---
+
+## 9. Responsive Design
+
+The layout is designed for:
+
+- Mobile devices.
+- Tablet devices.
+- Desktop devices.
+
+Responsive testing should include:
+
+- Navigation behavior.
+- Card layout.
+- Image scaling.
+- Text wrapping.
+- Form layout.
+- Section spacing.
+- Theme readability.
+
+---
+
+## 10. Accessibility Considerations
+
+The design considers:
+
+- Semantic HTML.
+- Meaningful headings.
+- Alternative text for images.
+- Keyboard navigation.
+- Visible focus indicators.
+- Sufficient colour contrast.
+- Reduced-motion preferences.
+- Readable text sizes.
+- Clear form validation messages.
+
+---
+
+## 11. Figma Reference
+
+Figma file:
+
+https://www.figma.com/design/vXIIGQHC0KavwkDA5MNPg5/Olinda-Vashi-Portifolio?node-id=0-1&p=f&t=nsRmjmQp8IWXPbT-0
+
+The Figma file should contain the design exploration, design system, wireframes, mockups, and prototype where applicable.
+
+---
+
+## 12. Design Review
+
+Before final submission, review the website against the Figma design and document any differences between the planned design and the implemented version.
